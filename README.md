@@ -6,7 +6,7 @@
 <p align="center"><b>
 SkullGamer#205's Level Collection
 </b></p>
-<p align="center">My SMBX (TheXTech) Levels</p>
+<p align="center">My [TheXTech](https://github.com/Wohlstand/TheXTech) Levels</p>
 
 # Chilly morning.
 <p align="center">
