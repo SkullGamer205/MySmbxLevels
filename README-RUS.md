@@ -15,7 +15,7 @@ SkullGamer#205's Level Collection
 
 # Funny Night
 <p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4463"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Funny Night/logo.png" alt="Funny Night"></a>
+<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4463"><img src="https://github.com/SkullGamer205/MySmbxLevels/blob/main/completed-levels/SkullGamer205%20-%20Funny%20night/logo.png?raw=true" alt="Funny Night"></a>
 </p>
 
 # Complex network of sewer pipes
