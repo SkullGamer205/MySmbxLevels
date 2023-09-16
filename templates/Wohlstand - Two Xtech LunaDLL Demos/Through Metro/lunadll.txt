@@ -1,0 +1,121 @@
+#-1
+SFXPreLoad,0,0,0,0,1,metrogoing.ogg // Preload sound to play it immediately
+SFXPreLoad,0,0,0,0,1,Гудок.ogg
+LoadImage,1,0,0,0,0,front-lights.png
+LoadImage,2,0,0,0,0,back-lights.png
+SetVar,0,0,0,0,1,TrainIsGoing
+$InitialTrainX,LoadNPCVar,294,0xA8,0,0,0,df
+$InitialTrainY,LoadNPCVar,294,0xB0,0,0,0,df
+
+// global commands
+#0
+// Event hooks
+OnEvent,0,0,0,1001,0,doMetro // Start train move
+OnEvent,0,0,0,1040,0,cancelMetro // Cancel metro work
+$TrainIsGoing,IfVar,0,0,1,1003,0,
+// Debug print
+Trigger,0,1030,0,0,1,
+
+#1001 // Подготовить поезд к поездке
+// Read player's data
+$MoveTrainToX,LoadPlayerVar,0,0xC0,0,0,1,df
+$MoveTrainToY,LoadPlayerVar,0,0xC8,0,0,1,df
+$MoveTrainToX,SetVar,0,1,4348,0,1, // add offset at player's X
+// Set position
+NPCMemSet,294,0x124,0xFFFF,0,1,w // active
+NPCMemSet,294,0x12a,1,0,1,w // time left
+$MoveTrainToX,NPCMemSet,294,0xA8,0,0,1,df // default loc x
+NPCMemSet,294,0xB0,-200227,0,1,df // default loc y
+Timer,0,1002,0,0,3,
+
+#1002
+Timer,0,1010,0,0,195,
+SetVar,0,0,1,0,1,TrainIsGoing
+PlaySFX,0,0,0,128,1,metrogoing.ogg
+
+#1003
+// X=-195300; Y=-200227; - train
+// NPCMemSet,294,0x78,-195300,0,1,df // loc x
+// NPCMemSet,294,0xA8,-195300,0,1,df // default loc x
+// NPCMemSet,294,0x80,-200227,0,1,df // loc y
+// NPCMemSet,294,0xB0,-200227,0,1,df // default loc y
+NPCMemSet,294,0x136,0xFFFF,0,1,w // Projectile
+NPCMemSet,294,0x124,0xFFFF,0,1,w // active
+NPCMemSet,294,0x12a,1770,0,1,w // time left
+NPCMemSet,294,0x24,0,0,1,w // Multiplier
+NPCMemSet,294,0x134,6,0,1,w // WallDeath
+// TriggerLunaEvent,1004,0,0,0,1,
+// NPCMemSet,294,0x12c,1,0,1,w // HoldingPlayer
+// NPCMemSet,294,0x78,-10,1,1,df // loc x
+// NPCMemSet,294,0xA8,-10,1,1,df // default loc x
+NPCMemSet,294,0x98,-10,0,1,df // speed X
+NPCMemSet,294,0xA0,0,0,1,df // speed y
+
+$PlayerPosX,LoadPlayerVar,0,0xC0,0,0,1,df
+$PlayerPosX,SetVar,0,2,500,0,1,
+$TrainRightSide,LoadNPCVar,294,0x78,0,0,1,df
+$TrainRightSide,SetVar,0,1,5768,0,1,
+$TrainRightSide,CompareVar,0,2,0,1004,1,PlayerPosX
+
+#1004 // Stop train
+$TrainIsGoing,IfVar,0,0,1,1005,1,
+SetVar,0,0,0,0,1,TrainIsGoing
+
+#1005 // Really stop train
+// SetVar,0,0,0,0,1,TrainIsGoing
+NPCMemSet,294,0x12a,1,0,1,w // time left
+TriggerSMBXEvent,0,0,0,0,1,pauseMetro
+Trigger,0,1020,0,0,1,
+
+
+// Honk when player in a front of going train
+#1010
+// if player Y > -200250
+OnPlayerMem,0xC8,-200250,1,1011,1,df
+#1011 // and if player Y < -200103
+OnPlayerMem,0xC8,-200103,2,1012,1,df
+#1012 // then, HONK!!!!
+PlaySFX,0,0,0,128,1,Гудок.ogg
+
+// Return train into the initial position
+#1020
+NPCMemSet,294,0x124,0xFFFF,0,1,w // active
+NPCMemSet,294,0x12a,1,0,1,w // time left
+$InitialTrainX,NPCMemSet,294,0xA8,0,0,1,df // default loc x
+$InitialTrainY,NPCMemSet,294,0xB0,0,0,1,df // default loc y
+
+#1030
+// show current position of the train
+$TrainX,LoadNPCVar,294,0x78,0,0,0,df
+$TrainY,LoadNPCVar,294,0x80,0,0,0,df
+$TrainXOrig,LoadNPCVar,294,0xA8,0,0,0,df
+$TrainYOrig,LoadNPCVar,294,0xB0,0,0,0,df
+// Print
+$TrainX,ShowVar,0,10,40,3,0,TrainX=
+$TrainY,ShowVar,0,10,60,3,0,TrainY=
+$TrainXOrig,ShowVar,0,10,80,3,0,TrainXOrig=
+$TrainYOrig,ShowVar,0,10,100,3,0,TrainYOrig=
+$TrainIsGoing,ShowVar,0,10,120,3,0,Train enabled=
+
+#1040 // Cancel metro work
+CancelSMBXEvent,0,0,0,0,1,doMetro
+CancelSMBXEvent,0,0,0,0,1,pauseMetro
+CancelSMBXEvent,0,0,0,0,1,backMetro
+CancelSMBXEvent,0,0,0,0,1,finalStop
+SetVar,0,0,0,0,1,TrainIsGoing
+StopSFX,0,0,0,0,35,metrogoing.ogg
+StopSFX,0,0,0,0,35,Гудок.ogg
+Trigger,0,1020,0,0,1,
+
+
+// #1003 // Гудок
+// SFX,0,0,0,0,1,metro-poezd-proezjaet-mimo-stuk-koles-28105-гудок.wav
+
+// #1004 // Нарисовать свет
+// $atTrainX,LoadNPCVar,294,0x78,0,0,1,df
+// $atTrainY,LoadNPCVar,294,0x80,0,0,1,df
+// $atTrainX,-300,1,0,0,1,
+// $atTrainY,-50,1,0,0,1,
+
+
+#END
