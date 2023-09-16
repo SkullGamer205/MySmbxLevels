@@ -6,7 +6,7 @@
 <p align="center"><b>
 SkullGamer#205's Level Collection
 </b></p>
-<p align="center">Мой сборик уровней, созданный для [<a href="https://github.com/SkullGamer205/MySmbxLevels"><alt="TheXTech">TheXTech</a></p>
+<p align="center">Мой сборик уровней, созданный для [<a href="https://github.com/Wohlstand/TheXTech"><alt="TheXTech">TheXTech</a></p>
 
 # Chilly morning.
 <p align="center">

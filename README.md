@@ -6,7 +6,7 @@
 <p align="center"><b>
 SkullGamer#205's Level Collection
 </b></p>
-<p align="center">My <a href="https://github.com/SkullGamer205/MySmbxLevels"><alt="TheXTech">TheXTech</a> Levels Collection</p>
+<p align="center">My <a href="https://github.com/Wohlstand/TheXTech"><alt="TheXTech">TheXTech</a> Levels Collection</p>
 
 # Chilly morning.
 <p align="center">
