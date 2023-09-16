@@ -4,4 +4,4 @@
 <p align="center"><b>
 SkullGamer#205's Level Collection
 </b></p>
-My SMBX (TheXTech) Levels
+<p align="center">My SMBX (TheXTech) Levels</p>
