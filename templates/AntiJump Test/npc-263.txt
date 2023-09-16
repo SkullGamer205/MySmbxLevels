@@ -1,2 +1,0 @@
-npcblock=0
-npcblocktop=0

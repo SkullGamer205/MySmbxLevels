@@ -1,7 +1,0 @@
-width=42
-framestyle=1
-frames=4
-framespeed=4
-nogravity=1
-noblockcollision=1
-speed=2

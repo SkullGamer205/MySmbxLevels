@@ -1,9 +1,0 @@
-#0
-LayerXSpeed,3,0,0,0,0,0
-BlockTrigger,0,25,1,1020,0,0
-BlockTrigger,0,26,1,1021,0,0
-#1020
-LayerXSpeed,3,0,0,0,1,-2
-#1021
-LayerXSpeed,3,0,0,0,1,2
-#END
