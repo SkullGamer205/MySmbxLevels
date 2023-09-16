@@ -6,4 +6,4 @@
 <p align="center"><b>
 SkullGamer#205's Level Collection
 </b></p>
-<p align="center">My SMBX (TheXTech) Levels</p>
+<p align="center">Мой сборик уровней, созданный для TheXTech</p>
