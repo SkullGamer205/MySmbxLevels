@@ -1,0 +1,15 @@
+height=16
+width=44
+gfxheight=32
+gfxwidth=76
+gfxoffsety=6
+framestyle=1
+framespeed=8
+frames=8
+foreground=1
+npcblock=0
+nogravity=1
+nofireball=1
+noiceball=1
+noyoshi=1
+speed=1.5

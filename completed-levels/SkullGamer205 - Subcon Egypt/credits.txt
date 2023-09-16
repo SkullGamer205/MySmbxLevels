@@ -1,0 +1,8 @@
+Textures:
+
+    SMB2 Expanded GFX-Pack v8 - Sednaiur
+
+Music:
+
+    Jimmy's Jukebox https://forum.zdoom.org/viewtopic.php?t=29117
+        "d_egypt.mid" from "Forty-two" / "Speed of Doom"

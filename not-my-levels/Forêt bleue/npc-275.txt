@@ -1,0 +1,5 @@
+width=32
+height=48
+GFXwidth=32
+GFXheight=48
+frames=2

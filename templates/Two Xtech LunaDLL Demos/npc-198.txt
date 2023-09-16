@@ -1,0 +1,7 @@
+gfxoffsety=2
+gfxwidth=34
+gfxheight=61
+width=22
+height=46
+framestyle=1
+name="Rosie"

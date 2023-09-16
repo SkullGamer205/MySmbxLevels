@@ -1,0 +1,4 @@
+gfxoffsety=0
+gfxheight=52
+width=26
+height=52

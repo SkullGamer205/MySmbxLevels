@@ -1,0 +1,5 @@
+height=32
+width=64
+gfxheight=32
+gfxwidth=64
+noyoshi=1

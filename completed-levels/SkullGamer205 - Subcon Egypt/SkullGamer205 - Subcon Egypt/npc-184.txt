@@ -1,0 +1,3 @@
+npcblock=1
+speed=0
+noyoshi=1

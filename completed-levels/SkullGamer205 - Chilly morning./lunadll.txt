@@ -1,0 +1,4 @@
+local modernhud = API.load("ModernStyledHud")
+
+modernhud.style = modernhud.STYLE_SMB2
+modernhud.timelimitOff()

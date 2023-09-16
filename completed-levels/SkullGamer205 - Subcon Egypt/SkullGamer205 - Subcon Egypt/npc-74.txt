@@ -1,0 +1,7 @@
+height=96
+width=32
+gfxheight=96
+gfxwidth=32
+gfxoffsety=0
+noyoshi=1
+noiceball=1

@@ -1,0 +1,16 @@
+-SMB3-recolored SMB1 ice bushes, SMW enemies: Legend-tony980 (snowy versions by Chad)
+-SMB3 blue P-switch door, icy seaweed, SMW brick effect: Road Runner
+-SMW ice cave background: ultramario (recolored by Chad)
+-SMW snow mountains background: Magibowser (recolored by Chad)
+-SMW snowy bushes, dark blue water, gray door, red Fire Flower generator block, ice cave tileset, snow Swooper, coins, Mushrooms, snow vine, red P-switch: Chad
+-SMW snowy brown grass tileset: SilverDeoxys563 (recolored by Chad)
+-SMW P-switch block: speedy (made red by Chad)
+-SMW ice blocks: zephyr + Ace
+-SMW Piranha Plants: Redigit
+-SMW leaf: Ike/Link
+-SMW coin effect: Valtteri (recolored by Chad)
+-SMW roulette exit: TLtimelord (recolored by Chad)
+
+Music:
+
+-Paper Mario Thousand-Year Door, Boggly Woods

@@ -1,0 +1,5 @@
+width=32
+height=32
+GFXwidth=32
+GFXheight=32
+Frames=5

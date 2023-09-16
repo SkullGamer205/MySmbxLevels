@@ -1,0 +1,8 @@
+score=0
+nogravity=1
+frames=8
+grid=16
+lightbrightness=1
+lightcolor=0xFF99FF
+lightflicker=false
+lightradius=128

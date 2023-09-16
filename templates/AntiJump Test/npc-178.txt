@@ -1,0 +1,2 @@
+framespeed=5
+nogravity=1

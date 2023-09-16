@@ -1,0 +1,7 @@
+frames=6
+framespeed=6
+lightradius = 128
+lightbrightness = 1
+lightcolor = 0xFFFFFF
+lightflicker = true
+grid=16

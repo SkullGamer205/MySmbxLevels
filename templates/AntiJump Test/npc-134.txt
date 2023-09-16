@@ -1,0 +1,5 @@
+gfxwidth=40
+gfxheight=40
+width=32
+height=32
+npcblock=0

@@ -1,0 +1,67 @@
+#-1
+
+// Place l'image "HUD.bmp"
+PlaceSprite,1,1,0,0,0,0
+
+// Creer une variable pour les Pièce.
+$CurrentCoins,SetVar,1,0,0,-1,1,0
+
+// Creer une variable pour les Vies.
+$CurrentLifes,SetVar,1,0,0,-1,2,0
+
+
+// Creer une variable pour les points.
+$CurrentPoint,SetVar,1,0,0,-1,4,0
+
+
+// Charge l'image "HUD.bmp"
+LoadImage,1,0xDC00FF,0,0,0,HUD.bmp
+
+#0
+LayerXSpeed,3,0,0,0,0,-2.5
+
+// Supprime le HUD par défaut
+LunaControl,2,1,0,0,0,0
+
+// Les variables créees seront égale aux donné du joueur.
+$CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w
+$CurrentLifes,LoadGlobalVar,0x00B2C5AC,0,0,0,0,f
+$CurrentPoint,LoadGlobalVar,0x00B2C8E4,0,0,0,0,w
+
+// Affiche les coeurs
+HeartSystem, 474,28,4,0,0,0
+
+// Emplacement de ces variables.
+$CurrentCoins,ShowVar,0,376,28,1,0,
+
+$CurrentLifes,ShowVar,0,258,28,1,0,
+
+$CurrentPoint,ShowVar,0,234,572,1,0,
+
+FilterReservePowerup,0,0,0,0,0,0
+FilterPlayer,0,1,5,0,0,0
+FilterPlayer,0,4,5,0,0,0
+FilterPlayer,0,3,5,0,0,0
+FilterPlayer,0,2,5,0,0,0
+
+// Activate #1000 after 600 frames
+Timer,0,1000,1,0,18720,0
+Timer,0,1001,0,0,12720,0
+
+
+//Réservé pour les NPCs
+NPCMemSet,30,0xE2,17,0,0,w
+
+// Time's up
+#1000
+ShowText, 0,600,27,3,600, TIMER
+ShowText, 0,618,48,3,600, 0
+ShowText, 0,293,292,3,600, TEMPS ECOULE
+Kill,0,0,0,0,1,0
+
+#END
+
+#1001
+SFX,0,0,0,0,1,Warning.wav
+
+#END

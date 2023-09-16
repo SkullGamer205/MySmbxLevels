@@ -1,0 +1,10 @@
+frames=8
+framestyle=0
+framespeed=6
+playerblock=1
+notcointransformable = true
+lightradius = 128
+lightbrightness = 1
+lightcolor = 0xFF99FF
+lightflicker = false
+grid=16

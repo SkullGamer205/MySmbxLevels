@@ -1,0 +1,230 @@
+//DragonCoins
+
+OnEvent,0,0,1,1002,0,DragonCoin1
+OnEvent,0,0,1,1003,0,DragonCoin2
+OnEvent,0,0,1,1004,0,DragonCoin3
+OnEvent,0,0,1,1005,0,DragonCoin4
+OnEvent,0,0,1,1006,0,DragonCoin5
+OnEvent,0,0,0,2012,0,Timer - Start                     // Start timer (#2012)
+OnEvent,0,0,0,2011,0,Timer - Pause                     // Pause Timer (#2011)
+OnEvent,0,0,0,2016,0,Timer - Stop                      // Stop Timer  (#2016)
+OnEvent,0,0,0,2017,0,Timer - Points                    // Transform time to points
+OnEvent,0,0,0,1022,0,Phanto Deactive
+OnEvent,0,0,0,1023,0,Boss - Grab Orb
+
+#-1
+
+//Draw Pictures in Screen (CUSTOM HUD)
+
+LoadImage,1,0xDC00FF,0,0,0,HUD.png
+LoadImage,2,0xDC00FF,0,0,0,Char1.png
+LoadImage,3,0xDC00FF,0,0,0,Char2.png
+LoadImage,4,0xDC00FF,0,0,0,Char3.png
+LoadImage,5,0xDC00FF,0,0,0,Char4.png
+LoadImage,6,0xDC00FF,0,0,0,Char5.png
+LoadImage,7,0xDC00FF,0,0,0,health.png
+LoadImage,8,0xDC00FF,0,0,0,health-line.png
+LoadImage,9,0xDC00FF,0,0,0,AceFill.png
+LoadImage,10,0xDC00FF,0,0,0,star.png
+LoadImage,11,0xDC00FF,0,0,0,Interface0.png             // key
+LoadImage,12,0xDC00FF,0,0,0,Interface8.png             // bomb
+LoadImage,13,0xDC00FF,0,0,0,Interface6.png             // rupee
+LoadImage,14,0xDC00FF,0,0,0,Interface2.png             // Coin
+
+//Place Pictures (CUSTOM HUD)
+PlaceSprite,1,1,32,32
+
+//Pull out the values of coins, lives, points from the game. (CUSTOM HUD)
+
+$CurrentCoins,SetVar,1,0,0,-1,1,0
+$CurrentLifes,SetVar,1,0,0,-1,2,0
+$CurrentPoint,SetVar,1,0,0,-1,4,0
+$CurrentStars,SetVar,1,0,0,-1,3,0
+$CurrentBombs,SetVar,1,0,0,-1,8,0
+$Timer,SetVar,1,0,600,-1,5,0
+$TimerState,SetVar,1,0,0,-1,6,0
+
+#0
+LunaControl,2,1,0,0,0,0
+FilterReservePowerup,0,0,0,0,0,0                        // Block ReverseBox
+PlayerMemSet,0,0x120,0,0,0,w                            // Disable ALTJUMP.
+IfVar,0,0,100,2020,0,Timer                              // Warns the player about the elapsed time (#2019)
+TriggerZone,1024,-201664,-201536,-189056,-188960,once
+
+                                //Assign values to coins, lives and points. (CUSTOM HUD)
+OnPlayerMem,0xF0,2,1,1013,w
+OnPlayerMem,0x16,0,1,1014,w                 // If >0 hearts (1) then Active #1001
+OnPlayerMem,0x16,1,1,1015,w                 // If >1 hearts (2) then Active #1002
+OnPlayerMem,0x16,2,1,1016,w                 // If >2 hearts (3) then Active #1003
+OnPlayerMem,0x12,0,1,1017,w
+OnPlayerMem,0xF0,5,2,1018,w
+
+$CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w
+$CurrentLifes,LoadGlobalVar,0x00B2C5AC,0,0,0,0,f
+$CurrentPoint,LoadGlobalVar,0x00B2C8E4,0,0,0,0,f
+$CurrentStars,LoadGlobalVar,0x00B251E0,0,0,0,0,w
+$CurrentBombs,LoadPlayerVar,0,0x08,0,0,0,w
+
+//Show (or paste) Custom variables (for HUD)
+$CurrentCoins,ShowVar,0,118,52,1,0,
+$CurrentLifes,ShowVar,0,118,32,1,0,
+$CurrentPoint,ShowVar,0,100,92,1,0,
+$CurrentStars,ShowVar,0,118,72,1,0,
+Timer,0,2010,0,0,1,0
+
+//Display "PLAYER_NAME" (For HUD)
+OnPlayerMem,0xF0,1,0,1008,w
+OnPlayerMem,0xF0,2,0,1009,w
+OnPlayerMem,0xF0,3,0,1010,w
+OnPlayerMem,0xF0,4,0,1011,w
+OnPlayerMem,0xF0,5,0,1012,w
+
+//Display Timer
+$Timer,ShowVar,0,208,52,1,0
+
+#2
+Timer,0,1026,0,0,600,1
+
+#5                                                    //Section Changer
+ScreenBorderTrigger,0,1019,0,0,0,16
+#6                                                    //Section Changer
+ScreenBorderTrigger,0,0,0,1020,0,16
+#7
+TriggerZone,1021,-198816,-198752,-193376,-193280,once
+
+//Ace Coins in HUD
+#1002
+PlaceSprite,1,9,174,32,0,0
+#1003
+PlaceSprite,1,9,190,32,0,0
+#1004
+PlaceSprite,1,9,206,32,0,0
+#1005
+PlaceSprite,1,9,222,32,0,0
+#1006
+PlaceSprite,1,9,238,32,0,0
+
+#1008                       // "PLAYER_NAME"
+PlaceSprite,1,2,58,32,2,0
+#1009
+PlaceSprite,1,3,58,32,2,0
+#1010
+PlaceSprite,1,4,58,32,2,0
+#1011
+PlaceSprite,1,5,58,32,2,0
+#1012
+PlaceSprite,1,6,58,32,2,0
+PlaceSprite,1,12,172,70,2,0
+$CurrentBombs,ShowVar,0,208,72,1,1,                     // Draw Bombs
+PlaceSprite,1,13,78,50,2,0                              // Draw Rupee
+
+//Heart System (For HUD)
+#1013
+PlaceSprite,1,8,32,32,2,0                               // Draw Line instead Hearts
+#1014
+PlaceSprite,1,7,32,32,2,0                               // Draw 1 Heart
+#1015
+PlaceSprite,1,7,32,66,2,0                               // Draw 2 Hearts
+#1016
+PlaceSprite,1,7,32,100,2,0                              // Draw 3 Hearts
+#1017
+PlaceSprite,1,11,60,50,2,0                              // Draw Key
+#1018
+PlaceSprite,1,14,78,50,2,0                              // Draw Coin
+#END
+
+                                                        //Section Changer [Part 2]
+#1019
+PlayerMemSet,0,0x15A,1,1,1,w
+#1020
+PlayerMemSet,0,0x15A,1,2,1,w
+#END
+
+#1021                                                   // Phanto Awaken
+TriggerSMBXEvent,0,0,0,0,0,Phanto Active
+PlaySFX,0,0,0,128,1,SFX/phanto-awaken-bg.ogg
+PlaySFX,0,0,0,128,1,SFX/phanto-awaken.ogg
+
+#1022                                                   // Kill Phantos when Key used..
+Kill,176,0,0,0,0,once
+Kill,46,0,0,0,0,once
+PlaySFX,0,0,0,128,1,SFX/phanto-awaken-bg.ogg
+TriggerSMBXEvent,0,0,0,0,0,Phanto Deactive Alt
+LayerYSpeed,3,100,1,0,0,60,1000
+LayerYSpeed,4,100,1,0,0,60,1000
+LayerYSpeed,5,100,1,0,0,60,1000
+LayerYSpeed,6,100,1,0,0,60,1000
+LayerYSpeed,7,100,1,0,0,60,1000
+LayerYSpeed,8,100,1,0,0,60,1000
+#END
+
+#1023                                                   // Open Hawk after beating Boss.
+TriggerSMBXEvent,0,0,0,0,0,Hawk - Open
+
+#1024                                                   // Hawk Open Mouth
+PlaySFX,0,0,0,128,1,SFX/hawkmouth-open.ogg
+LayerYSpeed,13,1,0,0,60,-0.246153846153846
+LayerYSpeed,14,1,0,0,60,0.492307692307692
+DeleteEventsFrom,1024,0,0,0,1,0
+#END
+
+#1025                                                   // Hawk Close Mouth
+PlaySFX,0,0,0,128,1,SFX/hawkmouth-close.ogg
+LayerYSpeed,13,1,0,0,60,0.246153846153846
+LayerYSpeed,14,1,0,0,60,-0.492307692307692
+DeleteEventsFrom,1025,0,0,0,1,0
+#END
+
+#1026
+PlayerMemSet,0,0x15A,1,2,1,w
+PlayMusic,0,1,0,0,0,0
+DeleteEventsFrom,2,0,0,0,1,0
+#END
+
+//Custom Timer
+#2010
+Timer,0,2010,0,0,44,1
+IfVar,0,0,1,2013,1,TimerState
+#2011
+$TimerState,SetVar,1,0,0,-1,1,0          // Pause Timer
+#2012
+$TimerState,SetVar,1,0,1,-1,1,0          // Play-Continue Timer
+#2013                                    // (Uses a built-in timer that triggers #2011) (Run every time the call is)
+Timer,0,2014,0,0,1,1
+IfVar,0,2,1,2015,1,Timer                 //
+#2014                                    // (With each passed command, subtract the value of the timer by 1 and send a signal to #1010)
+$Timer,SetVar,1,2,1,-1,1,0
+#2015
+Kill,0,0,0,0,1,0
+Trigger,0,2016,0,0,1,0
+$Timer,SetVar,1,0,0,-1,1,0
+#2016
+$TimerState,SetVar,1,0,0,-1,1,0
+DeleteEventsFrom,2013,0,0,0,1,0
+DeleteEventsFrom,2014,0,0,0,1,0
+DeleteEventsFrom,2015,0,0,0,1,0         // Stops Timer
+#2017                                   // Timer - Points
+IfVar,0,2,6,2018,1,Timer                // If $Timer > 0, then gave points and play sound
+IfVar,0,1,5,2019,1,Timer
+IfVar,0,2,1,2021,1,Timer                // If $Timer < 1, then play another sound
+Trigger,0,1025,0,0,0,0
+#2018
+$Timer,SetVar,1,2,1,-1,1,0
+MemAssign,0x00B2C8E4,100,1,0,1,f
+PlaySFX,0,0,0,128,1,SFX/score-tally.ogg
+Trigger,0,2017,0,0,0,0
+#2019
+$Timer,SetVar,1,2,5,-1,1,0
+MemAssign,0x00B2C8E4,500,1,0,1,f
+PlaySFX,0,0,0,128,1,SFX/score-tally.ogg
+Trigger,0,2017,0,0,0,0
+#2020
+PlaySFX,0,0,0,128,1,SFX/hurry-up.ogg
+DeleteEventsFrom,2020,0,0,0,1,0
+#2021
+PlaySFX,0,0,0,128,1,SFX/score-tally-end.ogg
+DeleteEventsFrom,2018,0,0,0,1,0
+DeleteEventsFrom,2019,0,0,0,1,0
+$Timer,SetVar,1,0,0,-1,1,0
+TriggerSMBXEvent,0,0,0,0,0,Level - Exit
+#END

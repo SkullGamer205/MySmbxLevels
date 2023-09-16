@@ -1,0 +1,112 @@
+OnEvent,0,0,1,1002,0,DragonCoin1
+OnEvent,0,0,1,1003,0,DragonCoin2
+OnEvent,0,0,1,1004,0,DragonCoin3
+OnEvent,0,0,1,1005,0,DragonCoin4
+OnEvent,0,0,1,1006,0,DragonCoin5
+OnEvent,0,0,1,1007,0,StarCollected
+
+#-1
+
+//Place Pictures (CUSTOM HUD)
+
+PlaceSprite,1,1,248,27,0,0
+PlaceSprite,1,2,212,27,0,0
+PlaceSprite,1,3,248,49,0,0
+PlaceSprite,1,4,228,48,0,0
+PlaceSprite,1,5,328,27,0,0
+
+//Pull out the values of coins, lives, points from the game. (CUSTOM HUD)
+
+$CurrentCoins,SetVar,1,0,0,-1,1,0
+$CurrentLifes,SetVar,1,0,0,-1,2,0
+$CurrentPoint,SetVar,1,0,0,-1,4,0
+
+//Draw Pictures in Screen (CUSTOM HUD)
+
+LoadImage,1,0xDC00FF,0,0,0,Interface1.png
+LoadImage,2,0xDC00FF,0,0,0,Interface3.png
+LoadImage,3,0xDC00FF,0,0,0,Interface1.png
+LoadImage,4,0xDC00FF,0,0,0,Interface2.png
+LoadImage,5,0xDC00FF,0,0,0,Dcoins.png
+LoadImage,6,0xDC00FF,0,0,0,Dragon.png
+LoadImage,7,0xDC00FF,0,0,0,Dragon.png
+LoadImage,8,0xDC00FF,0,0,0,Dragon.png
+LoadImage,9,0xDC00FF,0,0,0,Dragon.png
+LoadImage,10,0xDC00FF,0,0,0,Dragon.png
+
+
+#0
+
+LunaControl,2,1,0,0,0,0
+
+//Assign values to coins, lives and points. (CUSTOM HUD)
+
+$CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w
+$CurrentLifes,LoadGlobalVar,0x00B2C5AC,0,0,0,0,f
+$CurrentPoint,LoadGlobalVar,0x00B2C8E4,0,0,0,0,w
+
+//Display THESE values (CUSTOM HUD)
+
+$CurrentCoins,ShowVar,0,268,48,3,0,
+$CurrentLifes,ShowVar,0,268,26,3,0,
+$CurrentPoint,ShowVar,0,268,70,3,0,
+
+//Display "WORLD 7-2R" like SMB, MF. (CUSTOM HUD)
+
+ShowText,0,454,26,3,0,World
+ShowText,0,462,48,3,0,7-2R
+ShowText,0,228,70,3,0,S:
+
+//Disable ReverseBox 
+
+FilterReservePowerup,0,0,0,0,0,0
+
+//Timers
+//The First Timer is used to kill player(-s) when it expires (DISPALYED) 
+//The Second Timer is used to signal the imminent expiration of the First Timer
+//by playing a sound "Warning.wav" after its (Second Timer) expiration. (HIDDEN) 
+//1 second = 60 frames --- 100 second = 6000 frames
+
+Timer,0,1000,1,0,36060,0
+Timer,0,1001,0,0,30060,0
+
+#1000
+
+//Displays the inscription "TIMER 0", because after the and of the time, The First Timer disappears.
+
+ShowText, 0,600,27,3,600, TIMER
+ShowText, 0,618,48,3,600, 0
+ShowText, 0,300,275,3,600, TIME IS UP
+//Kill Player(-s)
+
+Kill,0,0,0,0,1,0
+
+#1001
+
+//Play the "Warning.wav" sound after the Second Timer expires.
+
+SFX,0,0,0,0,1,Warning.wav
+
+//Dragon Coins in HUD
+#1002
+PlaceSprite,1,6,328,27,0,0
+
+#1003
+PlaceSprite,1,7,344,27,0,0
+
+#1004
+PlaceSprite,1,8,360,27,0,0
+
+#1005
+PlaceSprite,1,9,376,27,0,0
+
+#1006
+PlaceSprite,1,10,392,27,0,0
+
+#1007
+
+//Displays the inscription after Star is collected.
+
+ShowText, 0,200,275,3,600, SECRET STAR COLLECTED
+
+#END 

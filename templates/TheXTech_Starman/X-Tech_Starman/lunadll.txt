@@ -1,0 +1,60 @@
+#-1
+$StarManActive,SetVar,0,0,0,0,1,_
+$GodActive,SetVar,0,0,0,0,1,_
+
+#0
+// IfNPC,182,2,0,1000,0,once
+ShowText,0,10,10,4,65,works
+OnEvent,0,0,0,1000,0,KURWA // Activate starman
+$StarManActive,IfVar,0,1,0,1001,0,_ // Run starman frame
+$StarManActive,IfVar,0,0,1,1002,0,_ // End starman
+$StarManActive,IfVar,0,0,65,1003,0,_ // Reset musik
+
+#1000 // Starman start
+$StarManActive,SetVar,0,0,650,0,1,_
+SetMusic,1,24,0,0,1,invicibility.spc|0;g=2;e0
+PlayMusic,0,1,0,0,1,
+ShowText,0,10,10,4,65,KURWA
+$GodActive,IfVar,0,0,0,1004,1,_ // Enable god
+$GodActive,SetVar,0,0,1,0,1,_
+
+#1001 // Starman frame
+$PlayerPosX,LoadPlayerVar,0,0xC0,0,0,1,df
+$PlayerPosY,LoadPlayerVar,0,0xC8,0,0,1,df
+$PlayerPosW,LoadPlayerVar,0,0xD8,0,0,1,df
+$PlayerPosH,LoadPlayerVar,0,0xD0,0,0,1,df
+$PlayerPosH,SetVar,0,1,4,0,1,_
+$PlayerPosSX,LoadPlayerVar,0,0xE0,0,0,1,df
+$PlayerPosSY,LoadPlayerVar,0,0xE8,0,0,1,df
+$PlayerPosX,NPCMemSet,171,0x078,0,0,1,df
+$PlayerPosY,NPCMemSet,171,0x080,0,0,1,df
+$PlayerPosW,NPCMemSet,171,0x090,0,0,1,df
+$PlayerPosH,NPCMemSet,171,0x088,0,0,1,df
+$PlayerPosSX,NPCMemSet,171,0x098,0,0,1,df
+$PlayerPosSY,NPCMemSet,171,0x0A0,0,0,1,df
+NPCMemSet,171,0x124,1,0,1,b  // Active
+NPCMemSet,171,0x12a,400,0,1,w  // Active
+NPCMemSet,171,0x136,1,0,1,b  // Set always projectile
+// NPCMemSet,300,0x130,1,0,1,dw // Can't hurt player
+$StarManActive,SetVar,0,2,1,0,1,_
+
+#1003 // Reset muzik
+TriggerSMBXEvent,0,0,0,0,1,Invincibility End
+
+#1002 // Starman end
+$GodActive,IfVar,0,0,1,1004,1,_ // Disable god
+$GodActive,SetVar,0,0,0,0,1,_
+ShowText,0,150,140,4,65,W DUPE
+NPCMemSet,171,0x078,0,0,1,df
+NPCMemSet,171,0x080,0,0,1,df
+NPCMemSet,171,0x090,0,0,1,df
+NPCMemSet,171,0x088,0,0,1,df
+NPCMemSet,171,0x098,0,0,1,df
+NPCMemSet,171,0x0A0,0,0,1,df
+NPCMemSet,171,0x024,0,0,1,df // Reset multiplier
+
+#1004 // Toggle god
+RunCheat,0,0,0,0,1,donthurtme
+MemAssign,0x00B2C8C4,0.0,0,1,b
+
+#END

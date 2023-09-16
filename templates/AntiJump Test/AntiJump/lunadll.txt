@@ -1,0 +1,4 @@
+#0
+PlayerMemSet,0,0x11E,0,0,0,w // Disable JUMP
+PlayerMemSet,0,0x120,0,0,0,w // Disable ALTJUMP
+#END

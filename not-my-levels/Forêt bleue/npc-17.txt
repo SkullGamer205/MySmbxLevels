@@ -1,0 +1,5 @@
+width=16
+height=16
+GFXwidth=16
+GFXheight=16
+framestyle=0

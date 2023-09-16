@@ -1,0 +1,9 @@
+HEAD
+TL:"big tile world";CPID:"TheXTech";
+HEAD_END
+TILES
+ID:1;X:-128;Y:0;
+TILES_END
+LEVELS
+ID:1;X:64;Y:192;SP:1;
+LEVELS_END

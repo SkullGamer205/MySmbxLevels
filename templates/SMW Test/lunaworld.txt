@@ -1,0 +1,101 @@
+//DragonCoins
+
+OnEvent,0,0,1,1002,0,DragonCoin1
+OnEvent,0,0,1,1003,0,DragonCoin2
+OnEvent,0,0,1,1004,0,DragonCoin3
+OnEvent,0,0,1,1005,0,DragonCoin4
+OnEvent,0,0,1,1006,0,DragonCoin5
+OnEvent,0,0,1,1007,0,StarCollected
+OnEvent,0,0,0,1012,0,Timer - Start                     //Включает таймер (См.#1010)
+OnEvent,0,0,0,1011,0,Timer - Pause                     //Приостанавливает таймер (См.#1011)
+OnEvent,0,0,0,1016,0,Timer - Stop                      //Останавлиает таймер [ZA WARUDO] (См.1016)
+OnEvent,0,0,0,1017,0,Timer - Points                    //Превращает время в очки
+
+#-1
+
+//Draw Pictures in Screen (CUSTOM HUD)
+
+LoadImage,1,0xDC00FF,0,0,0,mario-mask.png
+LoadImage,2,0xDC00FF,0,0,0,luigi-mask.png
+LoadImage,3,0xDC00FF,0,0,0,cross.png
+LoadImage,4,0xDC00FF,0,0,0,time.png
+LoadImage,5,0xDC00FF,0,0,0,coin.png
+LoadImage,6,0xDC00FF,0,0,0,star.png
+LoadImage,7,0xDC00FF,0,0,0,line.png
+LoadImage,8,0xDC00FF,0,0,0,dragon-coin.png
+LoadImage,9,0xDC00FF,0,0,0,dragon-coin-mask.png
+
+//Place Pictures (CUSTOM HUD)
+
+//PlaceSprite,1,#,X,Y,0,0
+PlaceSprite,1,4,88,120
+PlaceSprite,1,5,142,64,0,0
+PlaceSprite,1,6,226,64
+PlaceSprite,1,7,64,104
+
+//Pull out the values of coins, lives, points from the game. (CUSTOM HUD)
+
+$CurrentCoins,SetVar,1,0,0,-1,1,0
+$CurrentLifes,SetVar,1,0,0,-1,2,0
+$CurrentPoint,SetVar,1,0,0,-1,4,0
+$CurrentStars,SetVar,1,0,0,-1,3,0
+$Timer,SetVar,1,0,400,-1,5,0
+$TimerState,SetVar,1,0,0,-1,6,0
+
+#0
+LunaControl,2,1,0,0,0,0
+//Assign values to coins, lives and points. (CUSTOM HUD)
+
+$CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w
+$CurrentLifes,LoadGlobalVar,0x00B2C5AC,0,0,0,0,f
+$CurrentPoint,LoadGlobalVar,0x00B2C8E4,0,0,0,0,f
+$CurrentStars,LoadGlobalVar,0x00B251E0,0,0,0,0,f
+
+Timer,0,1010,0,0,1,0
+
+//Show (or paste) Custom variables (for HUD)
+$CurrentCoins,ShowVar,0,176,88,1,0,
+$CurrentLifes,ShowVar,0,104,88,1,0,
+$CurrentPoint,ShowVar,0,176,120,1,0,
+$CurrentStars,ShowVar,0,266,88,1,0,
+$Timer,ShowVar,0,104,120,1,0
+
+//Display "PLAYER_NAME" (For HUD)
+OnPlayerMem,0xF0,1,0,1008,w
+OnPlayerMem,0xF0,2,0,1009,w
+#END
+#1008   //"Player Name"
+PlaceSprite,1,1,64,64,2,0
+#1009
+PlaceSprite,1,2,64,64,2,0
+#END
+
+//Custom Timer
+#1010
+Timer,0,1010,0,0,44,1
+IfVar,0,0,1,1013,1,TimerState
+#1011
+$TimerState,SetVar,1,0,0,-1,1,0
+#1012
+$TimerState,SetVar,1,0,1,-1,1,0
+#1013                                               (Использует встроенный таймер, который триггерит #1011) (Выполняется каждый раз, когда зовут)
+Timer,0,1014,0,0,1,1
+IfVar,0,2,1,1015,1,Timer
+#1014                                               (С каждой прошедшей командой, отнимается значение таймера на 1 и посылает сигнал в #1010)
+$Timer,SetVar,1,2,1,-1,1,0
+#1015
+Kill,0,0,0,0,1,0
+Trigger,0,1016,0,0,1,0
+$Timer,SetVar,1,0,0,-1,1,0
+#1016
+$TimerState,SetVar,1,0,0,-1,1,0
+DeleteEventsFrom,1013,0,0,0,1,0
+DeleteEventsFrom,1014,0,0,0,1,0
+DeleteEventsFrom,1015,0,0,0,1,0
+#1017
+IfVar,0,1,0,1018,1,Timer
+#1018
+$Timer,SetVar,1,2,1,-1,1,0
+MemAssign,0x00B2C8E4,100,1,0,1,f
+Trigger,0,1017,0,0,0,0
+#END

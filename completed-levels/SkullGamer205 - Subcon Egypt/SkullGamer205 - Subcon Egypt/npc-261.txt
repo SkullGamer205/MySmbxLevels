@@ -1,0 +1,3 @@
+gfxoffsety=0
+noiceball=1
+nofireball=0

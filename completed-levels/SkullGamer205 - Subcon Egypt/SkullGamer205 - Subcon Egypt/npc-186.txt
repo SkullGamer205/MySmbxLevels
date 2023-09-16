@@ -1,0 +1,6 @@
+npcblock=1
+nohurt=0
+speed=0
+noblockcollision=0
+noyoshi=1
+nogravity=0

@@ -1,0 +1,6 @@
+gfxwidth=30
+gfxheight=30
+width=32
+height=32
+frames=1
+name="Wasp nest"

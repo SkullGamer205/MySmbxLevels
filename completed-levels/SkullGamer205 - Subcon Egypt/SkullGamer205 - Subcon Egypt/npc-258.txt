@@ -1,0 +1,7 @@
+height=48
+width=48
+gfxheight=56
+gfxwidth=56
+gfxoffsety=4
+framespeed=5
+frames=10

@@ -1,0 +1,4 @@
+gfxoffsety=0
+playerblock=0
+npcblock=0
+grabside=0

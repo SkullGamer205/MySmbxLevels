@@ -1,0 +1,5 @@
+lightradius = 128
+lightbrightness = 1
+lightcolor = 0xFF99FF
+lightflicker = false
+grid=16
