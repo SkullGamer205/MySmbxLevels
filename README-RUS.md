@@ -10,32 +10,32 @@ SkullGamer#205's Level Collection
 
 # Chilly morning.
 <p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4719"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Chilly morning./logo.png" alt="Chilly morning"></a>
+<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4462"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Chilly morning./logo.png" alt="Chilly morning"></a>
 </p>
 
 # Funny Night
 <p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4719"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Funny Night/logo.png" alt="Funny Night"></a>
-</p>
-
-# Secrets of Egyptian pyramid
-<p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4719"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Secrets of Egyptian pyramid/logo.png" alt="Secrets of Egyptian pyramid"></a>
+<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4463"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Funny Night/logo.png" alt="Funny Night"></a>
 </p>
 
 # Complex network of sewer pipes
 <p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4719"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Complex network of sewer pipes/logo.png" alt="Complex network of sewer pipes"></a>
+<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4510"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Complex network of sewer pipes/logo.png" alt="Complex network of sewer pipes"></a>
+</p>
+
+# Secrets of Egyptian pyramid
+<p align="center">
+<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4511"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Secrets of Egyptian pyramid/logo.png" alt="Secrets of Egyptian pyramid"></a>
 </p>
 
 # Pipe Labyrinth
 <p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4719"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Pipe Labyrinth/logo.png" alt="Pipe Labyrinth"></a>
+<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4639"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Pipe Labyrinth/logo.png" alt="Pipe Labyrinth"></a>
 </p>
 
 # Blocky Hills
 <p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4719"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Blocky Hills/logo.png" alt="Blocky Hills"></a>
+<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4706"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Blocky Hills/logo.png" alt="Blocky Hills"></a>
 </p>
 
 # Subcon Egypt
