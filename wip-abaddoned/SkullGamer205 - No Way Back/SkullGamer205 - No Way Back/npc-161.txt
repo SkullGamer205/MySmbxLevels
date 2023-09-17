@@ -1,0 +1,9 @@
+height=64
+width=64
+gfxheight=96
+gfxwidth=64
+framestyle=1
+framespeed=6
+frames=2
+noyoshi=1
+score=3
