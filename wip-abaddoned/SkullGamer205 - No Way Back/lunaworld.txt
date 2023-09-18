@@ -83,16 +83,16 @@ OnPlayerMem,0xF0,5,0,1001,w
 OnPlayerMem,0xF0,5,3,1002,w
 OnPlayerMem,0x13E,1,0,1003,w
 
-TriggerZone,1004,-200240,-200192,-198976,-198816,once
+PlaySFX,0,0,-1,128,1,sfx/Ambi1.ogg
+PlaySFX,0,0,-1,128,1,sfx/Ambi2.ogg
+
+TriggerZone,1004,-200240,-200192,-198976,-198816,0
+
 #1001
 PlaceSprite,1,5,266,68,2,0                                                                                                  // Draw Bomb
 PlaceSprite,1,4,266,50,2,0                                                                                                  // Draw Rupee
 PlaceSprite,1,1,286,70,2,0                                                                                                  // Cross 4 (Bomb)
 $CurrentBombs,ShowVar,0,302,68,3,1,                                                                                         // Show CurrentBombs var
-
-#1
-PlaySFX,0,0,-1,128,1,sfx/Ambi1.ogg
-PlaySFX,0,0,-1,128,1,sfx/Ambi2.ogg
 
 #1002
 PlaceSprite,1,2,272,50,2,0
@@ -101,11 +101,13 @@ PlaceSprite,1,2,272,50,2,0
 SetVar,0,1,1,0,1,Deaths
 
 #1004
+Kill,0,0,0,0,1,0
 TriggerSMBXEvent,0,0,0,0,1,Section 0 - Default
 TriggerSMBXEvent,0,0,0,0,1,Cloud - Right
 TriggerSMBXEvent,0,0,0,0,1,Timer - Start
 
-#2010
+
+
 Timer,0,2010,0,0,44,1
 IfVar,0,0,1,2013,1,TimerState
 #2011
