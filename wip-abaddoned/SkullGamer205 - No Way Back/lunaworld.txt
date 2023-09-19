@@ -36,13 +36,18 @@ LoadImage,5,0xDC00FF,0,0,0,ui/Interface8.png                                    
 LoadImage,6,0xDC00FF,0,0,0,ui/Interface9.png                                                                                // Timer
 LoadImage,7,0xDC00FF,0,0,0,ui/Interface10.png                                                                               // Death
 
+LoadImage,8,0xDC00FF,0,0,0,anim/rain-1.png
+LoadImage,9,0xDC00FF,0,0,0,anim/rain-2.png
+LoadImage,10,0xDC00FF,0,0,0,anim/rain-3.png
+LoadImage,11,0xDC00FF,0,0,0,anim/rain-4.png
+
                                                                                                                         // Clearing User Values
 $CurrentCoins,SetVar,1,0,0,-1,1,0                                                                                           // Current Coins
 $CurrentLifes,SetVar,1,0,0,-1,2,0                                                                                           // Current Lives
 $CurrentPoint,SetVar,1,0,0,-1,4,0                                                                                           // Current Points
 $CurrentStars,SetVar,1,0,0,-1,3,0                                                                                           // Current Stars
 $CurrentBombs,SetVar,1,0,0,-1,8,0                                                                                           // Current Bombs
-$Timer,SetVar,1,0,750,-1,5,0                                                                                                // Timer
+$Timer,SetVar,1,0,700,-1,5,0                                                                                                // Timer
 $TimerState,SetVar,1,0,0,-1,6,0                                                                                             // Timer State
 
                                                                                                                         // Place Base Sprites
@@ -54,12 +59,15 @@ PlaceSprite,1,3,266,32,0,0                                                      
 PlaceSprite,1,6,682,52,0,0                                                                                                  // Timer
 PlaceSprite,1,7,32,32,0,0                                                                                                   // Death
 
+Trigger,0,2001,0,0,1,0
+
 #0
 LunaControl,2,1,0,0,0,0                                                                                                 // Deactivate Default HUD {First}
 FilterReservePowerup,0,0,0,0,0,0                                                                                        // Block Reverse Box
-IfVar,0,0,100,2119,0,Timer                                                                                              // It warns about elapsed time (#2019)
+IfVar,0,0,100,2020,0,Timer                                                                                              // It warns about elapsed time (#2019)
                                                                                                                         // Triggers timer
 Timer,0,2010,0,0,1,0
+TriggerZone,2009,-200608,-200096,-176544,-176512,once
 
                                                                                                                         // Load User Values  {Third}
 $CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w                                                                            // Current Coins
@@ -86,7 +94,8 @@ OnPlayerMem,0x13E,1,0,1003,w
 PlaySFX,0,0,-1,128,1,sfx/Ambi1.ogg
 PlaySFX,0,0,-1,128,1,sfx/Ambi2.ogg
 
-TriggerZone,1004,-200240,-200192,-198976,-198816,0
+TriggerZone,1004,-200608,-200000,-198944,-198912,once
+
 
 #1001
 PlaceSprite,1,5,266,68,2,0                                                                                                  // Draw Bomb
@@ -95,19 +104,42 @@ PlaceSprite,1,1,286,70,2,0                                                      
 $CurrentBombs,ShowVar,0,302,68,3,1,                                                                                         // Show CurrentBombs var
 
 #1002
-PlaceSprite,1,2,272,50,2,0
+PlaceSprite,1,2,270,50,2,0
 
 #1003
 SetVar,0,1,1,0,1,Deaths
 
 #1004
-Kill,0,0,0,0,1,0
+TriggerSMBXEvent,0,0,0,0,1,Timer - Start
 TriggerSMBXEvent,0,0,0,0,1,Section 0 - Default
 TriggerSMBXEvent,0,0,0,0,1,Cloud - Right
-TriggerSMBXEvent,0,0,0,0,1,Timer - Start
 
 
+#2001
+PlaceSprite,1,8,0,0,2,0
+Trigger,0,2002,0,0,2,0
+#2002
+Timer,0,2003,0,0,2,0
+#2003
+PlaceSprite,1,9,0,0,2,0
+Trigger,0,2004,0,0,2,0
+#2004
+Timer,0,2005,0,0,2,0
+#2005
+PlaceSprite,1,10,0,0,2,0
+Trigger,0,2006,0,0,2,0
+#2006
+Timer,0,2007,0,0,2,0
+#2007
+PlaceSprite,1,11,0,0,2,0
+Trigger,0,2008,0,0,2,0
+#2008
+Timer,0,2001,0,0,2,0
+#2009
+TriggerSMBXEvent,0,0,0,0,1,Timer - Stop
+Trigger,0,2016,0,0,1,0
 
+#2010
 Timer,0,2010,0,0,44,1
 IfVar,0,0,1,2013,1,TimerState
 #2011
