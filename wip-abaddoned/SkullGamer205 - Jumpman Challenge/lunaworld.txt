@@ -73,7 +73,7 @@ PlaceSprite,1,9,684,66,0,0                                                      
 #0
 LunaControl,2,1,0,0,0,0                                                                                                 // Deactivate Default HUD {First}
 FilterReservePowerup,0,0,0,0,0,0                                                                                        // Block Reverse Box
-IfVar,0,0,100,2119,0,Timer                                                                                              // It warns about elapsed time (#2019)
+IfVar,0,0,100,2020,0,Timer                                                                                              // It warns about elapsed time (#2019)
 
 LayerXSpeed,3,0,0,0,0,0                                                                                                 // Restore Platform1's speed
 
