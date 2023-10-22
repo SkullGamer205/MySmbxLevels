@@ -35,7 +35,7 @@ SkullGamer#205's Level Collection
 
 # Blocky Hills
 <p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4706"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Blocky Hills/logo.png" alt="Blocky Hills"></a>
+<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4706"><img src="https://camo.githubusercontent.com/7af524e82af24d98f89dde7c9c9a3849af52e420a66da140b7c7ae92bf7512d5/68747470733a2f2f6c6963656e7365627574746f6e732e6e65742f6c2f62792d6e632d73612f342e302f38387833312e706e67" alt="Blocky Hills"></a>
 </p>
 
 # Subcon Egypt
