@@ -1,9 +1,5 @@
 [Русский](README-RUS.md) | [English](README.md)
 
-## Licence
-
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" alt="CC BY-NC-SA 4.0 Deed"></a>
-
 <p align="center">
 <a href="https://github.com/SkullGamer205/MySmbxLevels"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/main-logo.png" alt="Logo"></a>
 </p>
@@ -46,3 +42,6 @@ SkullGamer#205's Level Collection
 <p align="center">
 <a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4719"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - Subcon Egypt/logo.png" alt="Subcon Egypt"></a>
 </p>
+
+## Licence
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" alt="CC BY-NC-SA 4.0 Deed"></a>
