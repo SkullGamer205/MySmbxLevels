@@ -47,7 +47,7 @@ SkullGamer#205's Level Collection
 
 ****
 
-## License
+## Лицензия
 
 Этот проект находится под лицензией [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 
