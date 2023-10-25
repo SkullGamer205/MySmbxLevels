@@ -24,6 +24,7 @@ OnEvent,0,0,0,2017,0,Timer - Points                                             
 
 
 ////DIDN'T WORK CORRECTLY////  MemAssign,0x00B2C5AC,0,0,0,1,f
+
                                                                                                                         // How to make a custom HUD
                                                                                                                             // In {Fisrt} - needed to hide default HUD
                                                                                                                             // In {Second} - needed to load custom sprites to LunaDLL
