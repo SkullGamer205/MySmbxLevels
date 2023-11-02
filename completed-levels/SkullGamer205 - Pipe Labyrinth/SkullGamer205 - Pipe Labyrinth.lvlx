@@ -3,10 +3,10 @@ TL:"SkullGamer205 - Pipe Labyrinth";SZ:1;CPID:"TheXTech";
 HEAD_END
 SECTION
 SC:0;L:-200000;R:-199200;T:-200600;B:-200000;MZ:9;MF:"";BG:10;
-SC:1;L:-199200;R:-196640;T:-200056;B:-199456;MZ:24;MF:"yet_another_bonus.mod";BG:7;
-SC:2;L:-196640;R:-193600;T:-200056;B:-199456;MZ:24;MF:"yet_another_bonus.mod";BG:7;
-SC:3;L:-199200;R:-193408;T:-200664;B:-200064;MZ:24;MF:"yet_another_bonus.mod";BG:7;
-SC:4;L:-195200;R:-193408;T:-201272;B:-200672;MZ:24;MF:"yet_another_bonus.mod";BG:7;
+SC:1;L:-199200;R:-196640;T:-200056;B:-199456;MZ:24;MF:"SkullGamer205 - Pipe Labyrinth/yet_another_bonus.mod";BG:7;
+SC:2;L:-196640;R:-193600;T:-200056;B:-199456;MZ:24;MF:"SkullGamer205 - Pipe Labyrinth/yet_another_bonus.mod";BG:7;
+SC:3;L:-199200;R:-193408;T:-200664;B:-200064;MZ:24;MF:"SkullGamer205 - Pipe Labyrinth/yet_another_bonus.mod";BG:7;
+SC:4;L:-195200;R:-193408;T:-201272;B:-200672;MZ:24;MF:"SkullGamer205 - Pipe Labyrinth/yet_another_bonus.mod";BG:7;
 SC:5;L:-200000;R:-197600;T:-201528;B:-200928;MZ:9;MF:"";BG:10;
 SECTION_END
 STARTPOINT
