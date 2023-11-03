@@ -20,6 +20,6 @@
                 1)      Jimmy's Jukebox  :  https://forum.zdoom.org/viewtopic.php?t=29117
                                                          "d_pipe.mid" from "Jimmy" folder
              2. GFX::
-z
+
                 1)      Nostalgic Paradise  :  https://wohlsoft.ru/forum/viewtopic.php?t=4490
                 2)      SMB1 Expanded  v3.0 (PGE Edition) - Sednaiur  :  https://www.smbxgame.com/forums/viewtopic.php?t=4907
