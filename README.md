@@ -59,7 +59,7 @@ SkullGamer#205's Level Collection
 # No Way Back
 
 <p align="center">
-<a href="https://github.com/SkullGamer205/MySmbxLevels/tree/main/completed-levels/SkullGamer205%20-%20No%20Way%20Back"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - No Way Back/logo.png" alt="Subcon Egypt"></a>
+<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4772"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/completed-levels/SkullGamer205 - No Way Back/logo.png" alt="Subcon Egypt"></a>
 </p>
 
 <a><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/.pics/snes/smb1/themes/dark/darkland.png"></a> <a><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/master/.pics/snes/smb1/logo.png"></a>
