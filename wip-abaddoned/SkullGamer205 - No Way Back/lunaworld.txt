@@ -19,6 +19,7 @@ OnEvent,0,0,0,2012,0,Timer - Start                                              
 OnEvent,0,0,0,2011,0,Timer - Pause                                                                                          // Pause Timer (#2011)
 OnEvent,0,0,0,2016,0,Timer - Stop                                                                                           // Stop Timer  (#2016)
 OnEvent,0,0,0,2017,0,Timer - Points                                                                                         // Transform time to points
+OnEvent,0,0,0,2022,0,DragonCoin - Collected                                                                                 // DragonCoin Event (#2022)
 
 #-1
 
@@ -39,20 +40,24 @@ LoadImage,4,0xDC00FF,0,0,0,ui/Interface6.png                                    
 LoadImage,5,0xDC00FF,0,0,0,ui/Interface8.png                                                                                // Bomb
 LoadImage,6,0xDC00FF,0,0,0,ui/Interface9.png                                                                                // Timer
 LoadImage,7,0xDC00FF,0,0,0,ui/Interface10.png                                                                               // Death
+LoadImage,8,0xDC00FF,0,0,0,ui/Interface11.png                                                                               // Dragon Coin
+LoadImage,9,0xDC00FF,0,0,0,ui/Interface12.png                                                                               // Dragon Coins
 
-LoadImage,8,0xDC00FF,0,0,0,anim/rain-1.png
-LoadImage,9,0xDC00FF,0,0,0,anim/rain-2.png
-LoadImage,10,0xDC00FF,0,0,0,anim/rain-3.png
-LoadImage,11,0xDC00FF,0,0,0,anim/rain-4.png
+                                                                                                                        // Draw rain animation
+LoadImage,10,0xDC00FF,0,0,0,anim/rain-1.png
+LoadImage,11,0xDC00FF,0,0,0,anim/rain-2.png
+LoadImage,12,0xDC00FF,0,0,0,anim/rain-3.png
+LoadImage,13,0xDC00FF,0,0,0,anim/rain-4.png
 
                                                                                                                         // Clearing User Values
 $CurrentCoins,SetVar,1,0,0,-1,1,0                                                                                           // Current Coins
-$CurrentLifes,SetVar,1,0,0,-1,2,0                                                                                           // Current Lives
-$CurrentPoint,SetVar,1,0,0,-1,4,0                                                                                           // Current Points
-$CurrentStars,SetVar,1,0,0,-1,3,0                                                                                           // Current Stars
-$CurrentBombs,SetVar,1,0,0,-1,8,0                                                                                           // Current Bombs
-$Timer,SetVar,1,0,700,-1,5,0                                                                                                // Timer
-$TimerState,SetVar,1,0,0,-1,6,0                                                                                             // Timer State
+$CurrentLifes,SetVar,1,0,0,-1,1,0                                                                                           // Current Lives
+$CurrentPoint,SetVar,1,0,0,-1,1,0                                                                                           // Current Points
+$CurrentStars,SetVar,1,0,0,-1,1,0                                                                                           // Current Stars
+$CurrentBombs,SetVar,1,0,0,-1,1,0                                                                                           // Current Bombs
+$CurrentDragonCoins,SetVar,1,0,0,-1,1,0                                                                                     // Current Dragon Coins
+$Timer,SetVar,1,0,700,-1,1,0                                                                                                // Timer
+$TimerState,SetVar,1,0,0,-1,1,0                                                                                             // Timer State
 
                                                                                                                         // Place Base Sprites
 PlaceSprite,1,1,52,34,0,0                                                                                                   // Cross 1 (Skull)
@@ -62,6 +67,7 @@ PlaceSprite,1,1,700,52,0,0                                                      
 PlaceSprite,1,3,266,32,0,0                                                                                                  // Stars
 PlaceSprite,1,6,682,52,0,0                                                                                                  // Timer
 PlaceSprite,1,7,32,32,0,0                                                                                                   // Death
+PlaceSprite,1,9,710,32,0,0                                                                                                  // Dragon Coins
 
 Trigger,0,2001,0,0,1,0
 
@@ -69,11 +75,20 @@ Trigger,0,2001,0,0,1,0
 LunaControl,2,1,0,0,0,0                                                                                                 // Deactivate Default HUD {First}
 FilterReservePowerup,0,0,0,0,0,0                                                                                        // Block Reverse Box
 IfVar,0,0,100,2020,0,Timer                                                                                              // It warns about elapsed time (#2019)
+
 ////DIDN'T WORK CORRECTLY////  OnGlobalMem,0x00B2C5A8,0,1,1005,0,w
 ////DIDN'T WORK CORRECTLY////  OnGlobalMem,0x00B2C5AC,0,1,1006,0,f
                                                                                                                         // Triggers timer
 Timer,0,2010,0,0,1,0
 TriggerZone,2009,-200608,-200096,-176544,-176512,once
+
+
+                                                                                                                        // Dragon Coins Checker
+IfVar,0,1,0,2023,0,CurrentDragonCoins
+IfVar,0,1,1,2024,0,CurrentDragonCoins
+IfVar,0,1,2,2025,0,CurrentDragonCoins
+IfVar,0,1,3,2026,0,CurrentDragonCoins
+IfVar,0,1,4,2027,0,CurrentDragonCoins
 
                                                                                                                         // Load User Values  {Third}
 $CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w                                                                            // Current Coins
@@ -86,13 +101,14 @@ $CurrentBombs,LoadPlayerVar,0,0x08,0,0,0,w                                      
                                                                                                                         // Show User values
 $CurrentCoins,ShowVar,0,302,50,3,0,                                                                                         // Current Coins (Used custom Var)
 // $CurrentLifes,ShowVar,0,132,32,3,0,                                                                                      // Current Lives (DIDN'T Needed)
-////DIDN'T WORK CORRECTLY////  $CustomCoins,ShowVar,0,302,50,3,0,
 $CurrentPoint,ShowVar,0,32,50,3,0,                                                                                          // Current Point
 $CurrentStars,ShowVar,0,302,32,3,0,                                                                                         // Current Stars
 $Timer,ShowVar,0,716,50,3,0                                                                                                 // Current Timer
 $Deaths,ShowVar,0,68,32,3,0                                                                                                 // Deaths Counter
 ShowText,0,464,32,3,0,WORLD
 ShowText,0,482,50,3,0,8-3
+
+////DIDN'T WORK CORRECTLY////  $CustomCoins,ShowVar,0,302,50,3,0,
 
 OnPlayerMem,0xF0,5,0,1001,w
 OnPlayerMem,0xF0,5,3,1002,w
@@ -101,7 +117,8 @@ OnPlayerMem,0x13E,1,0,1003,w
 PlaySFX,0,0,-1,128,1,sfx/Ambi1.ogg
 PlaySFX,0,0,-1,128,1,sfx/Ambi2.ogg
 
-TriggerZone,1004,-200608,-200000,-198944,-198912,once
+                                                                                                                        // Custom triggers
+TriggerZone,1004,-200608,-200000,-198944,-198912,once                                                                       // Cloud - Start (#1004)
 
 
 #1001
@@ -116,7 +133,7 @@ PlaceSprite,1,2,270,50,2,0
 #1003
 SetVar,0,1,1,0,1,Deaths
 
-#1004
+#1004                                                                                                                  // Cloud - Start
 TriggerSMBXEvent,0,0,0,0,1,Timer - Start
 TriggerSMBXEvent,0,0,0,0,1,Section 0 - Default
 TriggerSMBXEvent,0,0,0,0,1,Cloud - Right
@@ -129,24 +146,26 @@ TriggerSMBXEvent,0,0,0,0,1,Cloud - Right
 ////DIDN'T WORK CORRECTLY////  MemAssign,0x00B2C5AC,1,2,0,1,f
 ////DIDN'T WORK CORRECTLY////  $CustomCoins,SetVar,0,1,100,0,1,1
 
-#2001
-PlaceSprite,1,8,0,0,2,0
+#2001                                                                                                                 // Draw rain animation
+PlaceSprite,1,10,0,0,2,0
 Trigger,0,2002,0,0,2,0
 #2002
 Timer,0,2003,0,0,2,0
 #2003
-PlaceSprite,1,9,0,0,2,0
+PlaceSprite,1,11,0,0,2,0
 Trigger,0,2004,0,0,2,0
 #2004
 Timer,0,2005,0,0,2,0
 #2005
-PlaceSprite,1,10,0,0,2,0
+PlaceSprite,1,12,0,0,2,0
 Trigger,0,2006,0,0,2,0
 #2006
 Timer,0,2007,0,0,2,0
 #2007
-PlaceSprite,1,11,0,0,2,0
+PlaceSprite,1,13,0,0,2,0
 Trigger,0,2008,0,0,2,0
+
+
 #2008
 Timer,0,2001,0,0,2,0
 #2009
@@ -183,20 +202,34 @@ Trigger,0,1025,0,0,0,0
 #2018
 $Timer,SetVar,1,2,1,-1,1,0
 MemAssign,0x00B2C8E4,100,1,0,1,dw
-PlaySFX,0,0,0,128,1,SFX/score-tally.wav
+PlaySFX,0,0,0,128,1,SFX/score-tally.ogg
 Trigger,0,2017,0,0,0,0
 #2019
 $Timer,SetVar,1,2,10,-1,1,0
 MemAssign,0x00B2C8E4,1000,1,0,1,dw
-PlaySFX,0,0,0,128,1,SFX/score-tally.wav
+PlaySFX,0,0,0,128,1,SFX/score-tally.ogg
 Trigger,0,2017,0,0,0,0
 #2020
-PlaySFX,0,0,0,128,1,sfx/hurry-up.wav
+PlaySFX,0,0,0,128,1,sfx/hurry-up.ogg
 DeleteEventsFrom,2020,0,0,0,1,0
 #2021
-PlaySFX,0,0,0,128,1,sfx/score-tally-end.wav
+PlaySFX,0,0,0,128,1,sfx/score-tally-end.ogg
 DeleteEventsFrom,2018,0,0,0,1,0
 DeleteEventsFrom,2019,0,0,0,1,0
 $Timer,SetVar,1,0,0,-1,1,0
 TriggerSMBXEvent,0,0,0,0,0,Level - Exit
+#END
+
+#2022                                                                                                                      // Dragon Coins
+$CurrentDragonCoins,SetVar,1,1,1,-1,1,0
+#2023
+PlaceSprite,1,8,710,32,2,0
+#2024
+PlaceSprite,1,8,722,32,2,0
+#2025
+PlaceSprite,1,8,734,32,2,0
+#2026
+PlaceSprite,1,8,746,32,2,0
+#2027
+PlaceSprite,1,8,758,32,2,0
 #END
