@@ -119,6 +119,7 @@ PlaySFX,0,0,-1,128,1,sfx/Ambi2.ogg
 
                                                                                                                         // Custom triggers
 TriggerZone,1004,-200608,-200000,-198944,-198912,once                                                                       // Cloud - Start (#1004)
+TriggerZone,1005,-200608,-200512,-177344,-177184,once
 
 
 #1001
@@ -138,6 +139,8 @@ TriggerSMBXEvent,0,0,0,0,1,Timer - Start
 TriggerSMBXEvent,0,0,0,0,1,Section 0 - Default
 TriggerSMBXEvent,0,0,0,0,1,Cloud - Right
 
+#1005
+TriggerSMBXEvent,0,0,0,0,1,Cloud - Down
 ////DIDN'T WORK CORRECTLY////  #1005
 ////DIDN'T WORK CORRECTLY////  MemAssign,0x00B2C5A8,1,2,0,1,w
 ////DIDN'T WORK CORRECTLY////  $CustomCoins,SetVar,0,1,1,0,1,1
