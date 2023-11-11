@@ -1,0 +1,5 @@
+#-1
+LoadImage,1,0xDC00FF,0,0,0,ui/ui.png
+PlaceSprite,1,1,0,0,0,0
+#0
+ShowText,0,74,0,6,0,999             // Death
