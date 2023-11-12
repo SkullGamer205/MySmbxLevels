@@ -1,5 +1,88 @@
+
+OnEvent,0,0,1,1006,0,StarCollected1
+OnEvent,0,0,1,1007,0,StarCollected2
+OnEvent,0,0,1,1008,0,StarCollected3
+OnEvent,0,0,1,1009,0,StarCollected4
+OnEvent,0,0,1,1010,0,StarCollected5
+
 #-1
-LoadImage,1,0xDC00FF,0,0,0,ui/ui.png
-PlaceSprite,1,1,0,0,0,0
+                                                                                                                        // Draw Pictures in Screen
+LoadImage,1,0xDC00FF,0,0,0,ui/frame.png                                                                                     // Frame
+LoadImage,2,0xDC00FF,0,0,0,ui/demos.png                                                                                     // "Demos"
+LoadImage,3,0xDC00FF,0,0,0,ui/food.png                                                                                      // "Food"
+LoadImage,4,0xDC00FF,0,0,0,ui/heart0.png                                                                                    // Heart Line
+LoadImage,5,0xDC00FF,0,0,0,ui/heart1.png                                                                                    // Heart
+LoadImage,6,0xDC00FF,0,0,0,ui/stars0.png                                                                                    // Stars Line
+LoadImage,7,0xDC00FF,0,0,0,ui/stars1.png                                                                                    // Stars
+LoadImage,8,0xDC00FF,0,0,0,ui/stars2.png                                                                                    // Stars-alt
+LoadImage,9,0xDC00FF,0,0,0,ui/coin1.png                                                                                     // Coins
+LoadImage,10,0xDC00FF,0,0,0,ui/coin2.png                                                                                    // Rupees
+LoadImage,11,0xDC00FF,0,0,0,ui/bomb.png                                                                                     // Bombs
+LoadImage,12,0xDC00FF,0,0,0,ui/key.png                                                                                      // Key
+
+                                                                                                                        // Clearing User Values
+$CurrentCoins,SetVar,1,0,0,-1,1,0                                                                                           // Current Coins
+$CurrentPoint,SetVar,1,0,0,-1,1,0                                                                                           // Current Points
+$CurrentStars,SetVar,1,0,0,-1,1,0                                                                                           // Current Stars
+$CurrentBombs,SetVar,1,0,0,-1,1,0                                                                                           // Current Bombs
+
+                                                                                                                        // Place Base Sprites
+PlaceSprite,1,1,0,0,0,0                                                                                                     // Frame
+PlaceSprite,1,2,16,0,0,0                                                                                                    // "Demos"
+PlaceSprite,1,3,146,0,0,0                                                                                                   // "Food"
+PlaceSprite,1,4,194,0,0,0                                                                                                   // Heart Line
+PlaceSprite,1,6,570,584,0,0                                                                                                 // Stars Line
+PlaceSprite,1,8,678,584.0.0                                                                                                 // Stars-alt
+PlaceSprite,1,9,266,0,0.0                                                                                                   // Coins
+
 #0
-ShowText,0,74,0,6,0,999             // Death
+
+LunaControl,2,1,0,0,0,0                                                                                                 // Deactivate Default HUD
+FilterReservePowerup,0,0,0,0,0,0                                                                                        // Block Reverse Box
+
+                                                                                                                        // Load User Values
+$CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w                                                                            // Current Coins
+$CurrentPoint,LoadGlobalVar,0x00B2C8E4,0,0,0,0,dw                                                                           // Current Points
+$CurrentStars,LoadGlobalVar,0x00B251E0,0,0,0,0,w                                                                            // Current Stars
+$CurrentBombs,LoadPlayerVar,0,0x08,0,0,0,w                                                                                  // Current Bombs
+
+                                                                                                                        // Show User values
+$CurrentCoins,ShowVar,0,284,0,6,0,                                                                                          // Current Coins
+$CurrentPoint,ShowVar,0,90,584,3,0,                                                                                         // Current Point
+$CurrentStars,ShowVar,0,696,584,6,0,                                                                                        // Current Stars
+$Demos,ShowVar,0,74,0,6,0                                                                                                   // Demos Counter
+
+OnPlayerMem,0x13E,2,0,1000,w                                                                                                // Demos Counter (#1000)
+OnPlayerMem,0x16,0,1,1001,w                                                                                                 // If >0 hearts (1) then Active #1001
+OnPlayerMem,0x16,1,1,1002,w                                                                                                 // If >1 hearts (2) then Active #1002
+OnPlayerMem,0x16,2,1,1003,w                                                                                                 // If >2 hearts (3) then Active #1003
+OnPlayerMem,0xF0,5,0,1004,w
+OnPlayerMem,0x12,0,1,1005,w
+
+#1000
+SetVar,0,1,1,0,1,Demos
+#1001
+PlaceSprite,1,5,194,0,2,0                                                                                                   // Draw 1 Heart
+#1002
+PlaceSprite,1,5,212,0,2,0                                                                                                   // Draw 2 Hearts
+#1003
+PlaceSprite,1,5,230,0,2,0                                                                                                   // Draw 3 Hearts
+#1004
+PlaceSprite,1,11,338,0,2,0                                                                                                  // Draw Bomb
+PlaceSprite,1,10,266,0,2,0                                                                                                  // Draw Rupee
+$CurrentBombs,ShowVar,0,356,0,6,1,                                                                                          // Current Bombs
+
+#1005
+PlaceSprite,1,12,392,0,2,0                                                                                                  // Draw Key
+
+#1006
+PlaceSprite,1,7,570,584,0,0
+#1007
+PlaceSprite,1,7,588,584,0,0
+#1008
+PlaceSprite,1,7,606,584,0,0
+#1009
+PlaceSprite,1,7,624,584,0,0
+#1010
+PlaceSprite,1,7,642,584,0,0
+#END
