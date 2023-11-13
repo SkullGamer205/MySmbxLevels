@@ -51,6 +51,7 @@ $CurrentCoins,ShowVar,0,284,0,6,0,                                              
 $CurrentPoint,ShowVar,0,90,584,3,0,                                                                                         // Current Point
 $CurrentStars,ShowVar,0,696,584,6,0,                                                                                        // Current Stars
 $Demos,ShowVar,0,74,0,6,0                                                                                                   // Demos Counter
+ShowText,0,732,584,6,0,/XX
 
 OnPlayerMem,0x13E,2,0,1000,w                                                                                                // Demos Counter (#1000)
 OnPlayerMem,0x16,0,1,1001,w                                                                                                 // If >0 hearts (1) then Active #1001
