@@ -1,10 +1,10 @@
 HEAD
-TL:"SkullGamer205 - Chuck Park (Act 2)";
+TL:"SkullGamer205 - Chuck Park (Act 2)";CPID:"TheXTech";
 HEAD_END
 SECTION
-SC:0;L:-200000;R:-198272;T:-200600;B:-200000;MZ:24;MF:"Donkey_Kong_Country-Fear_Factory.ogg";BG:54;
-SC:1;L:-198400;R:-196544;T:-199992;B:-199392;MZ:24;MF:"Donkey_Kong_Country-Fear_Factory.ogg";BG:54;
-SC:2;L:-198400;R:-196544;T:-199384;B:-198784;MZ:24;MF:"Donkey_Kong_Country-Fear_Factory.ogg";BG:54;
+SC:0;L:-200000;R:-198272;T:-200600;B:-200000;MZ:24;MF:"SkullGamer205 - Chuck Park (Act 2)/mus/Donkey_Kong_Country-Fear_Factory.ogg";BG:54;
+SC:1;L:-198400;R:-196544;T:-199992;B:-199392;MZ:24;MF:"SkullGamer205 - Chuck Park (Act 2)/mus/Donkey_Kong_Country-Fear_Factory.ogg";BG:54;
+SC:2;L:-198400;R:-196544;T:-199384;B:-198784;MZ:24;MF:"SkullGamer205 - Chuck Park (Act 2)/mus/Donkey_Kong_Country-Fear_Factory.ogg";BG:54;
 SECTION_END
 STARTPOINT
 ID:1;X:-199756;Y:-200150;D:1;
