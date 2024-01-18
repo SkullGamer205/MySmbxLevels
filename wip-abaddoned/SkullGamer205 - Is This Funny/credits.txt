@@ -1,0 +1,7 @@
+Textures:
+    * Main [and ripped] textures:
+        * VIP 3 rom  :  https://www.smwcentral.net/?p=section&a=details&id=12722&r=0
+
+Music:
+    * Jimmy's Jukebox  :  https://forum.zdoom.org/viewtopic.php?t=29117
+        *                            "d_submis.mid" from "Jimmy" folder
