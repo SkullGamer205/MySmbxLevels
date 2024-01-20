@@ -1,6 +1,8 @@
 Textures:
     * Main [and ripped] textures:
-        * VIP 3 rom  :  https://www.smwcentral.net/?p=section&a=details&id=12722&r=0
+        * "VIP 3" romhack  :  https://www.smwcentral.net/?p=section&a=details&id=12722&r=0
+        * City Tileset : https://www.smwcentral.net/?p=section&a=details&id=10474
+        * Turn Block Emotions --- https://www.smwcentral.net/?p=section&a=details&id=35700
 
 Music:
     * Jimmy's Jukebox  :  https://forum.zdoom.org/viewtopic.php?t=29117
