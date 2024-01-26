@@ -135,9 +135,9 @@ PlaceSprite,1,2,270,50,2,0
 SetVar,0,1,1,0,1,Deaths
 
 #1004                                                                                                                  // Cloud - Start
-TriggerSMBXEvent,0,0,0,0,1,Timer - Start
 TriggerSMBXEvent,0,0,0,0,1,Section 0 - Default
 TriggerSMBXEvent,0,0,0,0,1,Cloud - Right
+Trigger,0,2012,0,0,1,0
 
 #1005
 TriggerSMBXEvent,0,0,0,0,1,Cloud - Down
