@@ -1,8 +1,5 @@
-
 OnEvent,0,0,0,2002,0,DragonCoin - Collected             // Dragon Coins Event (Check #2002)
-
 #-1
-
                                                         // Load A ui pics.
 LoadImage,1,0xDC00FF,0,0,0,ui/Container0.png                // ReverseBox
 LoadImage,2,0xDC00FF,0,0,0,ui/Interface1.png                // Cross
@@ -11,27 +8,32 @@ LoadImage,4,0xDC00FF,0,0,0,ui/Interface3.png                // Character Name
 LoadImage,5,0xDC00FF,0,0,0,ui/Interface5.png                // Star
 LoadImage,6,0xDC00FF,0,0,0,ui/Interface10.png               // Skull
 LoadImage,7,0xDC00FF,0,0,0,ui/Interface11.png               // Dragon Coins
-
+LoadImage,8,0xDC00FF,0,0,0,ui/Interface0.png                // HUD Bar
+LoadImage,9,0xDC00FF,0,0,0,ui/Item1.png                     // Question
+LoadImage,10,0xDC00FF,0,0,0,ui/Item2.png                    // Mushy
+LoadImage,11,0xDC00FF,0,0,0,ui/Item3.png                    // Fire
+LoadImage,12,0xDC00FF,0,0,0,ui/Item4.png                    // Leaf
+LoadImage,13,0xDC00FF,0,0,0,ui/Item5.png                    // Tanooki
+LoadImage,14,0xDC00FF,0,0,0,ui/Item6.png                    // Hammer
+LoadImage,15,0xDC00FF,0,0,0,ui/Item7.png                    // Ice
                                                         // Set UserVars
 $CurrentCoins,SetVar,1,0,0,-1,1,0                           // Coins
-$CurrentStars,SetVar,1,0,0,-1,3,0                           // Stars
-$CurrentPoint,SetVar,1,0,0,-1,4,0                           // Points
+$CurrentStars,SetVar,1,0,0,-1,1,0                           // Stars
+$CurrentPoint,SetVar,1,0,0,-1,1,0                           // Points
 $CurrentDragonCoins,SetVar,1,0,0,-1,1,0                     // Dragon Coins
-
+$ReverseBox,SetVar,1,0,0,-1,1,0
                                                         // Draw UserVars
-PlaceSprite,1,1,36,36,0,0                                   // ReverseBox
-PlaceSprite,1,3,96,48,0,0                                   // Coin
-PlaceSprite,1,4,28,16,0,0                                   // Character Name
-PlaceSprite,1,5,96,64,0,0                                   // Star
-PlaceSprite,1,6,96,32,0,0                                   // Skull
-PlaceSprite,1,7,112,98,0,0                                  // Dragon Coins
-
-PlaceSprite,1,2,114,34,0,0                                  // Cross
-PlaceSprite,1,2,114,50,0,0                                  // Cross
-PlaceSprite,1,2,114,66,0,0                                  // Cross
-
+PlaceSprite,1,8,-24,0,0,0                                   // HUD Bar
+PlaceSprite,1,1,382,4,0,0                                   // ReverseBox
+PlaceSprite,1,3,194,4,0,0                                   // Coin
+PlaceSprite,1,4,32,4,0,0                                    // Character Name
+PlaceSprite,1,5,264,4,0,0                                   // Star
+PlaceSprite,1,6,106,4,0,0                                   // Skull
+PlaceSprite,1,7,690,4,0,0                                   // Dragon Coins
+PlaceSprite,1,2,124,6,0,0                                   // Cross
+PlaceSprite,1,2,212,6,0,0                                   // Cross
+PlaceSprite,1,2,282,6,0,0                                   // Cross
 # PlaceSprite,1,"ITEM",48,48,0,0
-
 #0
 LunaControl,2,1,0,0,0,0                                 // Enable LunaDLL (And hide Default HUD)
 OnPlayerMem,0x13E,1,0,2001,w                            // Deaths Counter (Check #2001)
@@ -45,26 +47,64 @@ IfVar,0,1,4,2007,0,CurrentDragonCoins
 $CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w            // Coins
 $CurrentPoint,LoadGlobalVar,0x00B2C8E4,0,0,0,0,dw           // Points
 $CurrentStars,LoadGlobalVar,0x00B251E0,0,0,0,0,w            // Stars
-
                                                         // Draw UserVars
-$CurrentDeaths,ShowVar,0,130,34,1,0                         // Deaths
-$CurrentCoins,ShowVar,0,130,50,1,0,                         // Coins
-$CurrentStars,ShowVar,0,130,66,1,0,                         // Stars
-$CurrentPoint,ShowVar,0,112,82,1,0,                         // Points
-
-#2001
-SetVar,0,1,1,0,1,CurrentDeaths
-
+$CurrentDeaths,ShowVar,0,140,6,1,0                          // Deaths
+$CurrentCoins,ShowVar,0,228,6,1,0,                          // Coins
+$CurrentStars,ShowVar,0,298,6,1,0,                          // Stars
+$CurrentPoint,ShowVar,0,546,6,1,0,                          // Points
+														//Display Item Stock  (For UI)
+OnPlayerMem,0x158,0,0,2016,w 
+OnPlayerMem,0x158,0,1,2015,w 
+OnPlayerMem,0x158,9,0,2009,w                                // Mushroom
+OnPlayerMem,0x158,184,0,2009,w                              //
+OnPlayerMem,0x158,185,0,2009,w                              //
+OnPlayerMem,0x158,14,0,2010,w                               // Fire
+OnPlayerMem,0x158,182,0,2010,w                              //
+OnPlayerMem,0x158,183,0,2010,w                              //
+OnPlayerMem,0x158,34,0,2011,w                               // Leaf
+OnPlayerMem,0x158,169,0,2012,w                              // Tanooki
+OnPlayerMem,0x158,170,0,2013,w                              // Hammer
+OnPlayerMem,0x158,264,0,2014,w                              // Ice
+OnPlayerMem,0x158,277,0,2014,w                              //
+#2001													// Death Counter
+$CurrentDeaths,SetVar,0,1,1,0,1,0
 #2002                                                   // Dragon Coins Event
 $CurrentDragonCoins,SetVar,1,1,1,-1,1,0
 #2003
-PlaceSprite,1,3,112,98,2,0
+PlaceSprite,1,3,690,4,2,0
 #2004
-PlaceSprite,1,3,130,98,2,0
+PlaceSprite,1,3,706,4,2,0
 #2005
-PlaceSprite,1,3,148,98,2,0
+PlaceSprite,1,3,722,4,2,0
 #2006
-PlaceSprite,1,3,166,98,2,0
+PlaceSprite,1,3,738,4,2,0
 #2007
-PlaceSprite,1,3,184,98,2,0
+PlaceSprite,1,3,754,4,2,0
+														// Reverse Box
+#2008														// Unknown
+PlaceSprite,1,9,392,4,2,0
+$ReverseBox,SetVar,0,0,1,0,1,0
+#2009														// Mushroom
+PlaceSprite,1,10,392,4,2,0
+$ReverseBox,SetVar,0,0,2,0,1,0
+#2010														// Fire
+PlaceSprite,1,11,392,4,2,0
+$ReverseBox,SetVar,0,0,2,0,1,0
+#2011														// Leaf
+PlaceSprite,1,12,392,4,2,0
+$ReverseBox,SetVar,0,0,2,0,1,0
+#2012														// Tanooki
+PlaceSprite,1,13,392,4,2,0
+$ReverseBox,SetVar,0,0,2,0,1,0
+#2013														// Hammer
+PlaceSprite,1,14,392,4,2,0
+$ReverseBox,SetVar,0,0,2,0,1,0
+#2014														// Ice
+PlaceSprite,1,15,392,4,2,0
+$ReverseBox,SetVar,0,0,2,0,1,0
+#2015
+IfVar,0,0,1,2008,1,ReverseBox
+$ReverseBox,SetVar,0,0,1,0,1,0
+#2016
+$ReverseBox,SetVar,1,0,0,-1,1,0
 #END
