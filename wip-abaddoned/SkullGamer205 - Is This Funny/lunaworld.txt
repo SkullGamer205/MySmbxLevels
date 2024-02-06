@@ -33,7 +33,6 @@ PlaceSprite,1,7,690,4,0,0                                   // Dragon Coins
 PlaceSprite,1,2,124,6,0,0                                   // Cross
 PlaceSprite,1,2,212,6,0,0                                   // Cross
 PlaceSprite,1,2,282,6,0,0                                   // Cross
-# PlaceSprite,1,"ITEM",48,48,0,0
 #0
 LunaControl,2,1,0,0,0,0                                 // Enable LunaDLL (And hide Default HUD)
 OnPlayerMem,0x13E,1,0,2001,w                            // Deaths Counter (Check #2001)
