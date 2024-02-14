@@ -22,17 +22,18 @@ $CurrentStars,SetVar,1,0,0,-1,1,0                           // Stars
 $CurrentPoint,SetVar,1,0,0,-1,1,0                           // Points
 $CurrentDragonCoins,SetVar,1,0,0,-1,1,0                     // Dragon Coins
 $ReverseBox,SetVar,1,0,0,-1,1,0
+$CustomCoins,SetVar,1,0,0,-1,1,0
                                                         // Draw UserVars
 PlaceSprite,1,8,-24,0,0,0                                   // HUD Bar
 PlaceSprite,1,1,382,4,0,0                                   // ReverseBox
-PlaceSprite,1,3,194,4,0,0                                   // Coin
+PlaceSprite,1,3,276,4,0,0                                   // Coin
 PlaceSprite,1,4,32,4,0,0                                    // Character Name
-PlaceSprite,1,5,264,4,0,0                                   // Star
+PlaceSprite,1,5,436,4,0,0                                   // Star
 PlaceSprite,1,6,106,4,0,0                                   // Skull
 PlaceSprite,1,7,690,4,0,0                                   // Dragon Coins
 PlaceSprite,1,2,124,6,0,0                                   // Cross
-PlaceSprite,1,2,212,6,0,0                                   // Cross
-PlaceSprite,1,2,282,6,0,0                                   // Cross
+PlaceSprite,1,2,294,6,0,0                                   // Cross
+PlaceSprite,1,2,454,6,0,0                                   // Cross
 #0
 LunaControl,2,1,0,0,0,0                                 // Enable LunaDLL (And hide Default HUD)
 OnPlayerMem,0x13E,1,0,2001,w                            // Deaths Counter (Check #2001)
@@ -47,9 +48,10 @@ $CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w            // Coins
 $CurrentPoint,LoadGlobalVar,0x00B2C8E4,0,0,0,0,dw           // Points
 $CurrentStars,LoadGlobalVar,0x00B251E0,0,0,0,0,w            // Stars
                                                         // Draw UserVars
-$CurrentDeaths,ShowVar,0,140,6,1,0                          // Deaths
-$CurrentCoins,ShowVar,0,228,6,1,0,                          // Coins
-$CurrentStars,ShowVar,0,298,6,1,0,                          // Stars
+$CurrentDeaths,ShowVar,0,140,6,1,0,                         // Deaths
+$CustomCoins,ShowVar,0,310,6,1,0,                          // Coins
+$CurrentCoins,ShowVar,0,310,36,1,0,                          // Coins
+$CurrentStars,ShowVar,0,470,6,1,0,                          // Stars
 $CurrentPoint,ShowVar,0,546,6,1,0,                          // Points
 														//Display Item Stock  (For UI)
 OnPlayerMem,0x158,0,0,2016,w 
@@ -65,6 +67,9 @@ OnPlayerMem,0x158,169,0,2012,w                              // Tanooki
 OnPlayerMem,0x158,170,0,2013,w                              // Hammer
 OnPlayerMem,0x158,264,0,2014,w                              // Ice
 OnPlayerMem,0x158,277,0,2014,w                              //
+														//Custom Coins
+OnGlobalMem,0x00B2C5A8,0,1,2017,0,w
+OnGlobalMem,0x00B2C5A8,0,2,2018,0,w
 #2001													// Death Counter
 $CurrentDeaths,SetVar,0,1,1,0,1,0
 #2002                                                   // Dragon Coins Event
@@ -106,4 +111,10 @@ IfVar,0,0,1,2008,1,ReverseBox
 $ReverseBox,SetVar,0,0,1,0,1,0
 #2016
 $ReverseBox,SetVar,1,0,0,-1,1,0
+#2017
+MemAssign,0x00B2C5A8,1,2,0,1,w
+$CustomCoins,SetVar,0,1,1,0,1,0
+#2018
+MemAssign,0x00B2C5A8,0,0,0,1,w
+$CustomCoins,SetVar,0,2,0.5,0,1,0
 #END
