@@ -1,9 +1,0 @@
-width=64
-height=32
-gfxheight=36
-gfxwidth=96
-noiceball=1
-noyoshi=0
-frames=4
-framestyle=1
-framespeed=4

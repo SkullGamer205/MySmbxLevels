@@ -1,0 +1,7 @@
+gfxheight=68
+gfxwidth=68
+frames=4
+framespeed=10
+framestyle=1
+height=68
+width=68

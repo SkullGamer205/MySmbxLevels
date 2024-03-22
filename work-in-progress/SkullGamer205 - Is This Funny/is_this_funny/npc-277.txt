@@ -1,0 +1,4 @@
+gfxoffsetx=0
+gfxoffsety=0
+frames=2
+framespeed=12

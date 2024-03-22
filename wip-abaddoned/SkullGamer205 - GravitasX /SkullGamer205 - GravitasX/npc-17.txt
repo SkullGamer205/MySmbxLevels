@@ -1,3 +1,0 @@
-gfxheight=28
-grid=32
-gridalign=0

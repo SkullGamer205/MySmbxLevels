@@ -1,0 +1,7 @@
+gfxoffsety=0
+playerblock=0
+playerblocktop=0
+npcblocktop=0
+grabside=0
+grabtop=0
+speed=1.38778e-16

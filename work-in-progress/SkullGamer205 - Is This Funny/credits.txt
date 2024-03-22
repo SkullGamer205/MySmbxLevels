@@ -1,0 +1,11 @@
+Textures:
+    * Main [and ripped] textures:
+        * "VIP 3" romhack            : https://www.smwcentral.net/?p=section&a=details&id=12722&r=0
+        * City Tileset               : https://www.smwcentral.net/?p=section&a=details&id=10474
+        * Turn Block Emotions        : https://www.smwcentral.net/?p=section&a=details&id=35700
+        * SMW Expanded [By Sednaiur] : https://www.smbxgame.com/forums/viewtopic.php?t=12834&hilit=SMW+expanded
+
+Music:
+    * Game 52: Action Gamemaster (Cheetahmen)  :  http://www.vgmusic.com/new-files/Action52Cheetahmen.mid
+                                     (https://www.vgmusic.com/file/4aadb1e5d48961931b9b098f870c73e1.html)
+

@@ -1,1 +1,0 @@
-gfxoffsetx=2

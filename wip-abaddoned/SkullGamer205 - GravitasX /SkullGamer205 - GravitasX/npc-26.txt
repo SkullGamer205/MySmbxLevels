@@ -1,6 +1,0 @@
-gfxoffsety=0
-playerblock=1
-npcblock=1
-npcblocktop=1
-grabside=1
-noyoshi=1

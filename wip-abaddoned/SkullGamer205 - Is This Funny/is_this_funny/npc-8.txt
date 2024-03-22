@@ -1,2 +1,0 @@
-gfxheight=64
-height=64

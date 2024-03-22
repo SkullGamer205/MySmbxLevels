@@ -1,0 +1,6 @@
+gfxheight=64
+gfxwidth=32
+height=40
+width=32
+playerblocktop=0
+nofireball=0

@@ -1,0 +1,48 @@
+1. 字体配置/Font Config - (字体名称 / Fontname).font.ini
+
+[font]
+name = "字体名称/Font-Name"
+ttf-outlines = 是否为 TTF 字体绘制边框 / Boolean for drawing borders for TTF Fonts
+ttf-outlines-colour = 边框颜色，以十六进制表示 / Border Colour Code in hex
+ttf-fallback = "字体名称 / TTF Font Name"
+ttf-fallback-1x = "低分辨率时所用的字体名称 / TTF Font Name for low resolution"
+ttf-size = 字体大小 / Font Size
+ttf-size-1x = 低分辨率时所用的字体大小 / Font Size for low resolution
+tables = 字形分配表总数 / Total Glyph Maps
+space-width = 空格间距 / Space width
+interletter-space = 字符间距 / Character width
+newline-offset = 换行间距 / New line width
+glyph-offset-x = 字符偏移 X / Character Offset X
+glyph-offset-y = 字符偏移 Y / Character Offset Y
+
+[tables]
+table1="字形分配表 1 / Font Table 1"
+table2="字形分配表 2 / Font Table 2"
+...
+tablen="字形分配表 n / Font Table n"
+
+2. 字形分配表 / Glyph Map - table.n.ini (务必使用 UTF-8 编码 / MUST use UTF-8 encoding)
+
+[font-map]
+texture=图片文件 / Image File
+width=宽度 / Width
+height=高度 / Height
+texture-scale=缩放 / Scale
+
+[entries]
+
+行-列-次序 = "字符+左裁切+右裁切"
+Row-Column-Order = "Character+Left Crop+Right Crop"
+
+3. 覆盖文件/Overrides - overrides.ini
+
+[font-overrides]
+1 = 状态栏 / Status Bar
+2 = 世界地图 / World Map
+3 = 用户界面 / UI
+4 = 信息 / Message
+
+[ttf-fonts]
+file# = "TTF 字体文件名称（最好使用 OFL / IPA 等开源协议的字体，免除风险）/ TTF Filename (Best to use Open Source Fonts [like OFL, IPA, etc.] to prevent issues)"
+file#-antialias = 是否反锯齿 / Boolean for Anti-ailas
+file#-bitmap-size = 位图大小 / Bitmap Size

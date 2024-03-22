@@ -1,3 +1,0 @@
-playerblocktop=0
-grabside=0
-nofireball=0

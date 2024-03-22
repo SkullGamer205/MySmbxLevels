@@ -1,0 +1,12 @@
+
+Textures:
+    1. h2643 packs:
+        1.1. SMB3 Black Door Entrance - h2643
+
+    2. NEW GFX MARIO & LUIGI
+
+    3. FNC2002's GFX Pack (V12.0)
+        3.1. SMB3 Extended Airship (Steel Blue)
+
+    4. Third Returns by Yingchun Soul
+        4.1. Fonts
