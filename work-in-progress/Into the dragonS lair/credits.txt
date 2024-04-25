@@ -2,3 +2,4 @@
 Textures:
     1. h2643 packs:
         1.1. SMB3 Black Door Entrance - h2643
+        1.2. SMB1 Airship - Murphmario + SuperSledgeBro
