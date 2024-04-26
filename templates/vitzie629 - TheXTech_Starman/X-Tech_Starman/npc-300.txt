@@ -1,0 +1,2 @@
+jumphurt=0
+nohurt=1

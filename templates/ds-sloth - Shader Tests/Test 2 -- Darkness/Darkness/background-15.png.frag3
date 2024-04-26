@@ -1,0 +1,47 @@
+#version 300 es
+
+precision mediump float;
+
+out vec4 o_FragColor;
+
+in   vec2  v_texcoord;
+
+uniform   sampler2D u_texture;
+uniform   sampler2D u_previous_pass;
+uniform   sampler2D u_depth_buffer;
+
+uniform   float u_clock;
+
+const float c_alpha_test_thresh = (8.0 / 255.0);
+
+const float l = 24.0 / 128.0;
+const float t = 26.0 / 128.0;
+
+const float w = 80.0 / 128.0;
+const float h = 60.0 / 128.0;
+
+const float r = l + w;
+const float b = t + h;
+
+
+void main()
+{
+    vec4 l_color = texture(u_texture, v_texcoord);
+
+    if(l_color.a < c_alpha_test_thresh)
+        discard;
+
+    if(v_texcoord.x < l || v_texcoord.x > r || v_texcoord.y < t || v_texcoord.y > b)
+        o_FragColor = texture(u_texture, v_texcoord);
+    else
+    {
+//        o_FragColor = texture(u_previous_pass, vec2((v_texcoord.x - l) / w, 1.0 - (v_texcoord.y - t) / h));
+        // mock darness shader
+
+
+        float depth = (texture(u_depth_buffer, vec2((v_texcoord.x - l) / w, 1.0 - (v_texcoord.y - t) / h)).r) * 255.0;
+        o_FragColor.rgb = vec3(depth, depth, depth);
+        o_FragColor.a = 1.0;
+    }
+}
+

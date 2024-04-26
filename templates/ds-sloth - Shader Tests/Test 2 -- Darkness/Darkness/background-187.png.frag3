@@ -1,0 +1,19 @@
+#version 300 es
+
+precision mediump float;
+
+out vec4 o_FragColor;
+
+in   vec2  v_fbcoord;
+
+uniform   sampler2D u_framebuffer;
+uniform   sampler2D u_light_buffer;
+
+void main()
+{
+    o_FragColor = texture(u_framebuffer, v_fbcoord);
+    o_FragColor.rgb *= texture(u_light_buffer, v_fbcoord).rgb;
+//    o_FragColor.rgb = vec3(0.0,0.0,0.0);
+//    o_FragColor.a = 1.0 - texture(u_light_buffer, v_fbcoord).r;
+}
+
