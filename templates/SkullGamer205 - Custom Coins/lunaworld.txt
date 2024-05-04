@@ -1,31 +1,37 @@
-OnEvent,0,0,0,1001,0,MinusCoin
+OnEvent,0,0,0,1002,0,MinusCoin
 OnEvent,0,0,0,1005,0,Mushi
 OnEvent,0,0,0,1006,0,Flowi
 #-1
 $Coins,SetVar,1,0,0,-1,1,0
 $Lives,SetVar,1,0,0,-1,1,0
 $SCoins,SetVar,1,0,100,-1,1,0
-
+$Timer,SetVar,1,0,0,-1.1.0
 #0
 LunaControl,1,1,0,0,0,0
 $Coins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w
 $Lives,LoadGlobalVar,0x00B2C5AC,0,0,0,0,f
+$Timer,LoadPlayerVar,0,0x176,0,0,0,w
+IfVar,0,2,1,1000,0,Coins
+IfVar,2,2,1,2001,0,CLives
 
 $Coins,ShowVar,0,64,96,1,0,
 $Lives,ShowVar,0,64,64,1,0,
+$Timer,ShowVar,0,64,164,1,0,
 $CCoins,ShowVar,0,64,128,1,0,
 $CCoins,CopyVar,0,0,0,0,0,SCoins
 $CCoins,CopyVar,0,3,0,0,0,Lives
 $CCoins,CopyVar,0,1,0,0,0,Coins
-OnGlobalMem,0x00B2C5A8,0,2,1000,0,w
 
 #1000
 MemAssign,0x00B2C5AC,1,2,0,1,f
 MemAssign,0x00B2C5A8,100,1,0,1,w
-
 #1001
+DeleteEventsFrom,1000,0,0,0,0,0
+#1002
 MemAssign,0x00B2C5A8,1,2,0,1,f
 
+#2001
+FilterToSmall,0,0,0,0,0,0
 
 #1005
 MemAssign,0x00B2C5A8,10,2,0,1,f

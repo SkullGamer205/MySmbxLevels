@@ -61,7 +61,7 @@ OnPlayerMem,0xF0,5,2,1018,w
 
 $CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w
 $CurrentLifes,LoadGlobalVar,0x00B2C5AC,0,0,0,0,f
-$CurrentPoint,LoadGlobalVar,0x00B2C8E4,0,0,0,0,f
+$CurrentPoint,LoadGlobalVar,0x00B2C8E4,0,0,0,0,dw
 $CurrentStars,LoadGlobalVar,0x00B251E0,0,0,0,0,w
 $CurrentBombs,LoadPlayerVar,0,0x08,0,0,0,w
 
@@ -210,12 +210,12 @@ IfVar,0,2,1,2021,1,Timer                // If $Timer < 1, then play another soun
 Trigger,0,1025,0,0,0,0
 #2018
 $Timer,SetVar,1,2,1,-1,1,0
-MemAssign,0x00B2C8E4,100,1,0,1,f
+MemAssign,0x00B2C8E4,100,1,0,1,dw
 PlaySFX,0,0,0,128,1,SFX/score-tally.ogg
 Trigger,0,2017,0,0,0,0
 #2019
 $Timer,SetVar,1,2,5,-1,1,0
-MemAssign,0x00B2C8E4,500,1,0,1,f
+MemAssign,0x00B2C8E4,500,1,0,1,dw
 PlaySFX,0,0,0,128,1,SFX/score-tally.ogg
 Trigger,0,2017,0,0,0,0
 #2020
