@@ -1,0 +1,4 @@
+foreground=1
+score=0
+noyoshi=0
+noshell=1

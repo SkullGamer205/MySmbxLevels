@@ -58,7 +58,6 @@ LunaControl,2,1,0,0,0,0                                                         
 FilterReservePowerup,0,0,0,0,0,0                                                                                        // Disable ReverseBox
 IfVar,0,0,100,9920,0,Timer                                                                                              // It warns about elapsed time (#9919)
 OnPlayerMem,0x13E,1,0,9907,w
-
                                                                                                                         // Load User Values  {Third}
 $CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w                                                                            // Current Coins
 $CurrentLives,LoadGlobalVar,0x00B2C5AC,0,0,0,0,f                                                                            // Current Lives
