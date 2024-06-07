@@ -1,5 +1,70 @@
-#0
-//ScreenBorderTrigger,LEFT,UP,RIGHT,DOWN,time,depth
+#-1     // Load & Paste Imaes (User Interface)
+LoadImage,1,0xDC00FF,0,0,0,UI/BAR.PNG
+LoadImage,2,0xDC00FF,0,0,0,UI/Interface1.png
+LoadImage,3,0xDC00FF,0,0,0,UI/Interface2.png
+LoadImage,4,0xDC00FF,0,0,0,UI/Interface10.png
+LoadImage,5,0xDC00FF,0,0,0,UI/Container3.png
+LoadImage,6,0xDC00FF,0,0,0,UI/Item1.png
+LoadImage,7,0xDC00FF,0,0,0,UI/Item2.png
+LoadImage,8,0xDC00FF,0,0,0,UI/Item3.png
+LoadImage,9,0xDC00FF,0,0,0,UI/Item4.png
+LoadImage,10,0xDC00FF,0,0,0,UI/Item5.png
+LoadImage,11,0xDC00FF,0,0,0,UI/Item6.png
+LoadImage,12,0xDC00FF,0,0,0,UI/Item7.png
+
+MemAssign,0x00B2C5AC,0,0,0,1,f
+
+PlaceSprite,1,1,0,576,0,0
+PlaceSprite,1,2,22,582,0,0
+PlaceSprite,1,2,104,582,0,0
+PlaceSprite,1,3,86,580,0,0
+PlaceSprite,1,4,4,580,0,0
+PlaceSprite,1,5,744,580,0,0
+// Item Coords: x:762 y:580
+
+        // Load Vars
+$CurrentCoins,SetVar,1,0,0,-1,1,0
+$CurrentLives,SetVar,1,0,0,-1,2,0
+$CurrentPoint,SetVar,1,0,0,-1,3,0
+$CurrentStars,SetVar,1,0,0,-1,4,0
+$HundredCon,SetVar,1,0,100,-1,1,0
+
+#0      // General Luna Autocode
+LunaControl,2,1,0,0,0,0
+
+        // Death Triggers
+OnPlayerMem,0x13E,1,0,9901,w
+OnPlayerMem,0xC8,-200064,1,9998,0,df
+
+$CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w
+$CurrentLives,LoadGlobalVar,0x00B2C5AC,0,0,0,0,f
+$CurrentPoint,LoadGlobalVar,0x00B2C8E4,0,0,0,0,dw
+$CurrentStars,LoadGlobalVar,0x00B251E0,0,0,0,0,w
+$CustomCoins,CopyVar,0,0,0,0,0,HundredCon
+$CustomCoins,CopyVar,0,3,0,0,0,CurrentLives
+$CustomCoins,CopyVar,0,1,0,0,0,CurrentCoins
+$CustomCoins,ShowVar,0,120,582,1,0,
+$CurrentPoint,ShowVar,0,616,582,1,0,
+$Deaths,ShowVar,0,38,582,1,0 
+
+        //Display Item Stock  (For UI)
+        //0x158 - NPC ID in Reverse Box.
+OnPlayerMem,0x158,0,0,9016,w 
+OnPlayerMem,0x158,0,1,9015,w 
+OnPlayerMem,0x158,9,0,9009,w
+OnPlayerMem,0x158,184,0,9009,w
+OnPlayerMem,0x158,185,0,9009,w
+OnPlayerMem,0x158,14,0,9010,w
+OnPlayerMem,0x158,182,0,9010,w
+OnPlayerMem,0x158,183,0,9010,w
+OnPlayerMem,0x158,34,0,9011,w
+OnPlayerMem,0x158,169,0,9012,w
+OnPlayerMem,0x158,170,0,9013,w
+OnPlayerMem,0x158,264,0,9014,w
+OnPlayerMem,0x158,277,0,9014,w
+
+        // "Rooms.txt"
+        // ScreenBorderTrigger,LEFT,UP,RIGHT,DOWN,time,depth
 ScreenBorderTrigger,1001,1002,1003,1004,0,16
 #1001
 PushScreenBoundary,1,2,0,0,1,-800
@@ -13,3 +78,43 @@ PushScreenBoundary,1,3,0,0,1,800
 #1004
 PushScreenBoundary,1,0,0,0,1,608
 PushScreenBoundary,1,1,0,0,1,608
+
+        // Reverse Box
+#9008   // Unknown
+PlaceSprite,1,6,762,580,2,0
+$ReverseBox,SetVar,0,0,1,0,1,0
+#9009   // Mushroom
+PlaceSprite,1,7,762,580,2,0
+$ReverseBox,SetVar,0,0,2,0,1,0
+#9010   // Fire
+PlaceSprite,1,8,762,580,2,0
+$ReverseBox,SetVar,0,0,2,0,1,0
+#9011   // Leaf
+PlaceSprite,1,9,762,580,2,0
+$ReverseBox,SetVar,0,0,2,0,1,0
+#9012	// Tanooki
+PlaceSprite,1,10,762,580,2,0
+$ReverseBox,SetVar,0,0,2,0,1,0
+#9013	// Hammer
+PlaceSprite,1,11,762,580,2,0
+$ReverseBox,SetVar,0,0,2,0,1,0
+#9014	// Ice
+PlaceSprite,1,12,762,580,2,0
+$ReverseBox,SetVar,0,0,2,0,1,0
+#9015
+IfVar,0,0,1,2008,1,ReverseBox
+$ReverseBox,SetVar,0,0,1,0,1,0
+#9016
+$ReverseBox,SetVar,1,0,0,-1,1,0
+
+#9901    // Death Counter
+SetVar,0,1,1,0,1,Deaths
+PlayerMemSet,0,0x13E,4,1,0,w
+
+#9998    // Death Trigger
+Kill,0,0,0,0,1,0
+Timer,0,9999,0,0,30,0
+#9999
+$Deaths,SetVar,1,1,1,-1,1,0
+PlayerMemSet,0,0x13C,1,0,0,b
+#END
