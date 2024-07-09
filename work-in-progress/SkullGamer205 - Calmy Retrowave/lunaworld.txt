@@ -77,6 +77,11 @@ OnPlayerMem,0x158,170,0,9013,w
 OnPlayerMem,0x158,264,0,9014,w
 OnPlayerMem,0x158,277,0,9014,w
 
+	// [EVENT] Rock Drops
+	// Left=-196800; Top=-200608; Right=-196000; Bottom=-200000;
+	// TriggerZone,EVENT #,TOP,BOTTOM,LEFT,RIGHT,ONCEorREPEAT
+TriggerZone,2001,-200608,-200000,-196800,-196000,once
+
         // "Rooms.txt"
         // ScreenBorderTrigger,LEFT,UP,RIGHT,DOWN,time,depth
 ScreenBorderTrigger,1001,1002,1003,1004,0,16
@@ -92,6 +97,11 @@ PushScreenBoundary,1,3,0,0,1,800
 #1004
 PushScreenBoundary,1,0,0,0,1,608
 PushScreenBoundary,1,1,0,0,1,608
+
+
+	// Events
+#2001   // Rock Drops
+TriggerSMBXEvent,0,0,0,0,1,Rock Drops
 
         // Reverse Box
 #9008   // Unknown
