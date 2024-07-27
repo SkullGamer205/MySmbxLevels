@@ -1,0 +1,40 @@
+Info
+
+Added by: Daniel Lawrence  Added: 2010-10-09
+
+File URL is http://www.vgmusic.com/new-files/SMB3_-_Underworld_-Remix-.mid
+Upload Date and Time: 08/12/2009 11:12:37
+
+Uploaded by:  (Jay Reichard)
+
+Game System: Nintendo
+Game Name: Super Mario Bros. 3
+Song Title: Underworld (Remix)
+Sequenced by: Jay Reichard
+Other Information: 
+
+-MIDI Header Information-
+MIDI Type: 1
+Number of Tracks: 12
+Delta Time Setting: 192
+
+-Text Analysis-
+By Jay Reichard  by NoteWorthy Composer
+
+-Copyright Event Analysis-
+Original Melody- Underworld Theme
+From Super Mario Bros. 3
+
+-Midi TrackName Analysis-
+Underworld (Remix)
+Staff-10
+Staff
+Staff-4
+Staff-1
+Staff-9
+Staff-8
+Staff-7
+Staff-2
+Staff-3
+Staff-6
+Staff-5

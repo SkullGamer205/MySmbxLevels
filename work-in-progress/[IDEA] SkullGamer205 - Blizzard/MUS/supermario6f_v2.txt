@@ -1,0 +1,47 @@
+Added by: nZero  Added: 2003-01-19
+
+File URL is http://www.vgmusic.com/new-files/supermario6f_v2.mid
+Upload Date and Time: 11/26/2002 18:14:10
+
+Uploaded by:  (Robert Smith)
+
+Game System: Super Nintendo
+Game Name: Super Mario All-Stars
+Song Title: Super Mario Bros. 3: World 6 Map (Remix) (v2.0)
+Sequenced by: Robert Smith 
+Other Information: Version 2 of my Ice World remix is out!  Here it is hot off the press.  Enjoy.  This is MUCH improved from the first version.
+
+-MIDI Header Information-
+MIDI Type: 1
+Number of Tracks: 17
+Delta Time Setting: 120
+
+-Text Analysis-
+Story of this song
+---------------------------
+The original of this song is in a very old Nintendo game called Super Mario Brothers 3.  It was my old and battered canvas to wo
+This is version 2 of the MIDI "Super Mario 3 - World 6 Ice Remix" by me.  Its much better now I think, lots of reverb and stuff,
+Requirements for song
+------------------------------------
+General MIDI (GM) synthesizer
+Chaos v1.9 (12 MB) soundfont or Taiji Generation 99 SE bank soundfont
+Enjoy. Give credit where it is due...
+Robert  TrackName Analysis-
+Music box
+Sweep pad
+Sweep pad
+Distortion guitar
+Distortion guitar
+Distortion guitar
+Synth bass
+Synth bass
+Bass lead
+Precussion
+Cymbals
+Strings
+Strings
+Strings
+Music box
+Music box
+
+
