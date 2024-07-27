@@ -9,11 +9,12 @@
 ================================================================================
 * Main Information *
 
-Title                   : The Pyramid Of Cheops
-Filename                : pyramid.lvlx
-Release date            : Unknown
-Author                  : SkullGamer205
-Author Info (Optional)	: https://dub.sh/SkullGamer205
+Title                   : <LEVEL-NAME>
+Filename                : <FILE-NAME.LVL>
+Release date            : <YYYY-MM-DD>
+Author                  : <AUTHOR-NAME>
+Author Info (Optional)	: <AUTHOR-INFO>
+Sumbitter (Optional)	:
 
 Description		: <Description>						...
 										...
@@ -21,32 +22,22 @@ Description		: <Description>						...
 										...
 										...
 										
-Additional Credits	: Music:: Jimmy's Jukebox				...
-	   	   		  [https://forum.zdoom.org/viewtopic.php?t=29117]..
+Additional Credits to	:							...
+	   	   								...
 										...
 										...
 										...
 
 ================================================================================
 * Additional Information *
+Engine                  : <SMBX 1.3 / SMBX 38A / SMBX2 / TheXTech> 
+Asset Pack              : <Original / AOD / A2XT / NP / LC>
+Single Player           : <Yes / No>
+Cooperative 2-4 Player  : <Yes / No>
 
-Engine                  : TheXTech
-Asset Pack              : Nostalgic Paradise
-Single Player           : Yes
-Cooperative 2-4 Player  : No
+Difficulty  		: <Easy / Normal / Hard / Insane / Kaizo>
 
-Build Time (optional)	: Not Started
-Difficulty  		: Unknown
+LunaDLL			: <Yes / No>
+LunaLua			: <
 
-LunaDLL			: Yes
-
-Characters		: Mario / Luigi / Toad
-Exits			: Unknown
-Stars			: Unknown
-
-Extra Information 	: Level not started							...
-      										...
-										...
-										...
-										...
-
+* Copyright *
