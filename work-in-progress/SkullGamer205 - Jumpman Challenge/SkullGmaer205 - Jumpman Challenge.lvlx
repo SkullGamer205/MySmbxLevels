@@ -12670,7 +12670,7 @@ ET:"Timer - Start";AS:0;AX:0;AY:0;
 ET:"Timer - Pause";AS:0;AX:0;AY:0;
 ET:"Timer - Stop";AS:0;AX:0;AY:0;
 ET:"Timer - Points";AS:0;AX:0;AY:0;
-ET:"ThisEventForTest";SSS:["ID\:9\;AS\:1\;"];TE:"Timer - Start";AU:1;AS:0;AX:0;AY:0;
+ET:"ThisEventForTest";SSS:["ID\:9\;AS\:1\;"];TE:"Timer - Start";AS:0;AX:0;AY:0;
 ET:"Platform2Left";TE:"Platform2Idle1";TD:45;ML:"Platform2";MX:-0.984615;MY:0;AS:0;AX:0;AY:0;
 ET:"Platform2Idle1";TE:"Platform2Right";TD:10;ML:"Platform2";MX:0;MY:0;AS:0;AX:0;AY:0;
 ET:"Platform2Right";TE:"Platform2Idle2";TD:45;ML:"Platform2";MX:0.984615;MY:0;AS:0;AX:0;AY:0;
