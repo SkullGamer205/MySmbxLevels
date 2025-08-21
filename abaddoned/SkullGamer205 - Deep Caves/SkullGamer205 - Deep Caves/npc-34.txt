@@ -1,0 +1,3 @@
+frames=2
+framespeed=16
+framestyle=1

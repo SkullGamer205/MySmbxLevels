@@ -1,0 +1,7 @@
+gfxwidth=48
+gfxheight=48
+width=48
+height=48
+speed=1.5
+frames=4
+framespeed=3

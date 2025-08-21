@@ -1,0 +1,171 @@
+#-1
+
+//Load Images (For HUD)
+LoadImage,1,0xDC00FF,0,0,0,HUD.png                   // HUD.png
+LoadImage,2,0xDC00FF,0,0,0,Char4.png                 // UPs
+LoadImage,3,0xDC00FF,0,0,0,Interface1.png            // X
+LoadImage,4,0xDC00FF,0,0,0,Hearts.png                // Hearts (Stroke)
+LoadImage,5,0xDC00FF,0,0,0,Heart.png                 // Hearts
+LoadImage,6,0xDC00FF,0,0,0,JumpOn.png                // Jump ON
+LoadImage,7,0xDC00FF,0,0,0,JumpOff.png               // Jump OFF
+
+//Place Images
+PlaceSprite,1,1,0,0,0,0                              // HUD.png
+PlaceSprite,1,2,520,576,0,0                            // UPs
+PlaceSprite,1,3,558,576,0,0                            // X
+PlaceSprite,1,4,654,568,0,0                           // Hearts (Stroke)
+
+
+
+                                                     //Set variables (for HUD)
+$CurrentLifes,SetVar,1,0,0,-1,2,0
+$JmupForce,SetVar,1,0,0,-1,2,0                       // Pull out values.
+#0
+//Hide Default HUD
+LunaControl,2,1,0,0,0,0
+                                                     //Load Custom variables (from #-1)
+$CurrentLifes,LoadGlobalVar,0x00B2C5AC,0,0,0,0,f
+$JumpForce,LoadPlayerVar,0,0x11C,0,0,w
+
+//Show (or paste) Custom variables (for HUD)
+$CurrentLifes,ShowVar,0,576,576,1,0,
+$JumpForce,ShowVar,0,78,64,1,0,
+
+//Heart System (For HUD)
+OnPlayerMem,0x16,0,1,1001,w                          // If >0 hearts (1) then Active #1001
+OnPlayerMem,0x16,1,1,1002,w                          // If >1 hearts (2) then Active #1002
+OnPlayerMem,0x16,2,1,1003,w                          // If >2 hearts (3) then Active #1003
+
+//Custom Parameters
+PlayerMemSet,0,0x11E,0,0,0,w                         // Disable JUMP.
+PlayerMemSet,0,0x120,0,0,0,w                         // Disable ALTJUMP.
+
+//Just Capitan Toad.
+FilterPlayer,0,1,4,0,0,0
+FilterPlayer,0,2,4,0,0,0
+FilterPlayer,0,3,4,0,0,0
+FilterPlayer,0,5,4,0,0,0
+
+BlockTrigger,0,181,5,1004,0,0                        // Enable JUMP [ See #1004]
+BlockTrigger,0,181,0,1005,0,0                        // Disable JUMP Force [ See #1005]
+
+#END
+
+#1001
+PlaceSprite,1,5,654,568,2,0                           // Draw 1 Heart
+#1002
+PlaceSprite,1,5,676,568,2,0                           // Draw 2 Hearts
+#1003
+PlaceSprite,1,5,698,568,2,0                           // Draw 3 Hearts
+#END
+
+#1004
+PlayerMemSet,0,0x11E,1,0,1,w                         // Enable JUMP.
+PlayerMemSet,0,0x120,1,0,1,w                         // Enable ALTJUMP.
+PlaceSprite,1,6,753,548,2,0
+
+#1005
+PlayerMemSet,0,0x11C,0,0,1,w
+PlaceSprite,1,7,749,549,2,0
+#END
+                                                     //Minimap (Maybe?)
+//PlaceSprite,1,8,530,22,0,0                         // Draw Mark "Floor1"
+//PlaceSprite,1,8,548,22,0,0                         // Draw Mark "Floor2"
+//PlaceSprite,1,8,566,22,0,0                         // Draw Mark "Floor3"
+//PlaceSprite,1,8,584,22,0,0                         // Draw Mark "Floor4"
+//PlaceSprite,1,8,592,22,0,0                         // Draw Mark "Floor5"
+
+//Left=-196672; Top=-198432; Right=-196640; Bottom=-198304;
+//TriggerZone,LuaAPITriggerNumber,TOP,BOTTOM,LEFT,RIGHT,once
+//TriggerSMBXEvent,0,0,0,0,ActiveTime,SMBXEventName
+
+#1006
+TriggerSMBXEvent,0,0,0,0,1,Platforms Disappear
+
+                                                     //Section Changer
+//ScreenBorderTrigger,LEFT,UP,RIGHT,DOWN,time,depth
+#2
+ScreenBorderTrigger,0,0,2001,0,0,16
+#3
+ScreenBorderTrigger,2002,0,2001,0,0,16
+#4
+ScreenBorderTrigger,2002,0,2001,0,0,16
+#5
+ScreenBorderTrigger,2002,0,2001,0,0,16
+#6
+ScreenBorderTrigger,2002,0,2001,0,0,16
+#7
+ScreenBorderTrigger,2002,0,2001,0,0,16
+#8
+ScreenBorderTrigger,2002,0,2001,0,0,16
+#9
+ScreenBorderTrigger,2002,0,0,2001,0,16
+#10
+ScreenBorderTrigger,2001,2002,0,0,0,16
+#11
+ScreenBorderTrigger,2001,0,2002,0,0,16
+#12
+ScreenBorderTrigger,2001,0,2002,0,0,16
+#13
+ScreenBorderTrigger,2001,0,2002,0,0,16
+#14
+ScreenBorderTrigger,2001,0,2002,0,0,16
+#15
+ScreenBorderTrigger,2001,0,2002,0,0,16
+#16
+ScreenBorderTrigger,2001,0,2002,0,0,16
+#17
+ScreenBorderTrigger,0,0,2002,2003,0,16
+#18
+ScreenBorderTrigger,0,2004,2001,0,0,16
+#19
+ScreenBorderTrigger,2002,0,2001,0,0,16
+#20
+ScreenBorderTrigger,2002,0,2001,0,0,16
+#21
+ScreenBorderTrigger,2002,0,2001,0,0,16
+#22
+ScreenBorderTrigger,2002,0,2001,0,0,16
+#23
+ScreenBorderTrigger,2002,0,2001,0,0,16
+#24
+ScreenBorderTrigger,2002,0,2001,0,0,16
+#25
+ScreenBorderTrigger,2002,0,0,2001,0,16
+#26
+ScreenBorderTrigger,2001,2002,0,0,0,16
+#27
+ScreenBorderTrigger,2001,0,2002,0,0,16
+#28
+ScreenBorderTrigger,2001,0,2002,0,0,16
+#29
+ScreenBorderTrigger,2001,0,2002,0,0,16
+#30
+ScreenBorderTrigger,2001,0,2002,0,0,16
+TriggerZone,1006,-198432,-198304,-196672,-196640,once
+#31
+ScreenBorderTrigger,2001,0,2002,0,0,16
+#32
+ScreenBorderTrigger,2001,0,2002,0,0,16
+#33
+ScreenBorderTrigger,0,0,2002,2005,0,16
+#34
+ScreenBorderTrigger,0,2006,2001,0,0,16
+                                                     //Section Changer [Part 2]
+#2001
+PlayerMemSet,0,0x15A,1,1,1,w
+#2002
+PlayerMemSet,0,0x15A,1,2,1,w
+#2003
+PlayerMemSet,0,0x15A,1,1,1,w
+PlayMusic,0,18,0,0,1
+#2004
+PlayerMemSet,0,0x15A,1,2,1,w
+PlayMusic,0,17,0,0,1
+#2005
+PlayerMemSet,0,0x15A,1,1,1,w
+PlayMusic,0,33,0,0,1
+#2006
+PlayerMemSet,0,0x15A,1,2,1,w
+PlayMusic,0,34,0,0,1
+#END

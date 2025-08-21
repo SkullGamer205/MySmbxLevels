@@ -1,0 +1,2 @@
+height=28
+frames=1

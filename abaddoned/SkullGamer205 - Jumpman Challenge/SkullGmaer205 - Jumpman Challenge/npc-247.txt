@@ -1,0 +1,5 @@
+grabtop=0
+jumphurt=1
+playerblocktop=0
+npcblocktop=1
+framestyle=0

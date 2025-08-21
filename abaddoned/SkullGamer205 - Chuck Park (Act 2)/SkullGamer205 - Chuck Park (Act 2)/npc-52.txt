@@ -1,0 +1,6 @@
+width=64
+height=32
+gfxwidth=64
+gfxheight=32
+nofireball=1
+noyoshi=1

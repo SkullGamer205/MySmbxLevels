@@ -1,0 +1,7 @@
+gfxheight=64
+gfxwidth=32
+height=64
+width=32
+playerblock=1
+npcblock=1
+grabside=0

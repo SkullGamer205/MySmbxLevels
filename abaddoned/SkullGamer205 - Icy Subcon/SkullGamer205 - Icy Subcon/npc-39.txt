@@ -1,0 +1,2 @@
+gfxoffsetx=0
+gfxoffsety=0
