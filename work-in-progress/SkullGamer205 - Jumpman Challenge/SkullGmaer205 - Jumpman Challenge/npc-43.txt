@@ -1,5 +1,0 @@
-gfxheight=90
-gfxwidth=96
-height=90
-width=96
-speed=1.5

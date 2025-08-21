@@ -1,5 +1,0 @@
-gfxheight=40
-gfxwidth=60
-height=40
-width=60
-speed=2.25

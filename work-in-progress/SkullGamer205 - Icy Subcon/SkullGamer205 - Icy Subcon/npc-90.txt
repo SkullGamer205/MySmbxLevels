@@ -1,2 +1,0 @@
-gfxoffsety=0
-speed=8.32667e-17
