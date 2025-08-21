@@ -1,8 +1,6 @@
 |[🇷🇺 Русский](README_RU.md) | [🇬🇧 English](README.md)|
 |-|-|
 
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
-
 <p align="center">
 <a href="https://github.com/SkullGamer205/MySmbxLevels"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.readme.d/_images/logo.png" alt="Logo"></a>
 </p>

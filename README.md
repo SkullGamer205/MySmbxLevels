@@ -1,71 +1,44 @@
-[Русский](README-RUS.md) | [English](README.md)
-
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+|[🇷🇺 Русский](README_RU.md) | [🇬🇧 English](README.md)|
+|-|-|
 
 <p align="center">
-<a href="https://github.com/SkullGamer205/MySmbxLevels"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/main-logo.png" alt="Logo"></a>
+<a href="https://github.com/SkullGamer205/MySmbxLevels"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.readme.d/_images/logo.png" alt="Logo"></a>
 </p>
 <p align="center"><b>
 SkullGamer#205's Level Collection
 </b></p>
-<p align="center">My <a href="https://github.com/Wohlstand/TheXTech"><alt="TheXTech">TheXTech</a> Levels Collection</p>
+<p align="center">My <a href="https://github.com/Wohlstand/TheXTech"><alt="TheXTech">TheXTech</a>'s level collection</p>
 
-# Chilly morning.
-<p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4462"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/completed-levels/SkullGamer205 - Chilly morning./logo.png" alt="Chilly morning"></a>
-</p>
+> [!IMPORTANT]
+> I, **SkullGamer205**, am the author (creator) of these levels. Most of the resources used in this repository (audio tracks, images, text files) are the property of other authors. These resources are grabbed from open sources and are used with direct mention of the authors and links to the sources. If you are the owner of this resource and you:
+> * _are against the use of your resources in this repository;_ 
+> * _are not mentioned in `CREDITS` as the author of this resource;_
+> * _are not this author, but the resource of a certain author was used;_
+>
+> I recommend contacting me through one of the available communication channels specified [here](https://skullgamer205.neocities.org)
 
-<a><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.pics/snes/smb3/logo.png" alt="Super Mario Bros 3 (SNES)"></a>
-</p>
+## General Info
+This repository for regular levels. If you are interested in battle mode levels, I recommend checking out [another](/SkullGamer205/TheXTech-Battle-Levels) repository.
+This repository is grouped into several subfolders (may be split into branches in the future), each of which stores levels of a certain global style.
 
-# Funny Night
-<p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4463"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/completed-levels/SkullGamer205%20-%20Funny%20night/logo.png" alt="Funny Night"></a>
-</p>
+Global styles (Asset Packs) - 3:
+* [Super Mario Bros. X](https://github.com/TheXTech/TheXTech/wiki/Game-assets-packages#super-mario-bros-x)
+* [Adventures of Demo](https://github.com/TheXTech/TheXTech/wiki/Game-assets-packages#adventures-of-demo)
+* [Nostalgic Paradise](https://github.com/TheXTech/TheXTech/wiki/Game-assets-packages#nostalgic-paradise)
 
-<a><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.pics/snes/smw/logo.png" alt="Super Mario World (SNES)"></a>
-# Complex network of sewer pipes
-<p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4510"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/completed-levels/SkullGamer205 - Complex network of sewer pipes/logo.png" alt="Complex network of sewer pipes"></a>
-</p>
+Also, there is a division of levels into categories (by state of completion):
+* `completed-levels` -- This category represents **completed** and ready to play levels.
+* `work-in-progress` -- This category represents **unfinished** levels. These levels are _under development_.
+* `abaddoned` -- Abandoned levels. This category represents unfinished levels that the author has not worked on for a long time. (**IT IS NOT RECOMMENDED TO RATE OR PLAY THEM!** These levels are quite raw and do not contain anything gameplay-wise)
+* `templates` -- Level templates. This category represents level templates. These levels are not intended for a full-fledged game. It's only for testing some features of the game or an ideas for future levels.
 
-<a><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.pics/snes/smb3/logo.png" alt="Super Mario Bros 3 (SNES)"></a>
-# Secrets of Egyptian pyramid
-<p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4511"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/completed-levels/SkullGamer205 - Secrets of Egyptian pyramid/logo.png" alt="Secrets of Egyptian pyramid"></a>
-</p>
-
-<a><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.pics/snes/smb3/logo.png" alt="Super Mario Bros 3 (SNES)"></a>
-# Pipe Labyrinth
-<p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4639"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/completed-levels/SkullGamer205 - Pipe Labyrinth/logo.png" alt="Pipe Labyrinth"></a>
-</p>
-
-<a><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.pics/snes/smb1/themes/dark/underground.png"></a> <a><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.pics/snes/smb1/logo.png"></a>
-
-
-# Blocky Hills
-<p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4706"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/completed-levels/SkullGamer205 - Blocky Hills/logo.png" alt="Blocky Hills"></a>
-</p>
-
-# Subcon Egypt
-<p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4719"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/completed-levels/SkullGamer205 - Subcon Egypt/logo.png" alt="Subcon Egypt"></a>
-</p>
-
-<a><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.pics/snes/smb2/logo.png" alt="Super Mario Bros 2 (SNES)"></a>
-
-# No Way Back
-
-<p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4772"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/completed-levels/SkullGamer205 - No Way Back/logo.png" alt="Subcon Egypt"></a>
-</p>
-
-<a><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.pics/snes/smb1/themes/dark/darkland.png"></a> <a><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.pics/snes/smb1/logo.png"></a>
+### Hierarchy
+````
+<STYLE>
+|-- <TAG>
+    |-- <LEVEL>
+````
 ****
-
-## License
 
 This project is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 
