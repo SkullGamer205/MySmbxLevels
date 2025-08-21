@@ -1,0 +1,149 @@
+#-001 // ── Pre-Start Scripts ─────────────────────────── //
+// ── Clear Lives ── //
+MemAssign,0x00B2C5Ac,0,0,0,1,f
+// ── Load Images (HUD) ── //
+LoadImage, 1,0xDC0FF0,0,0,0,GFX/Interface1.png
+LoadImage, 2,0xDC0FF0,0,0,0,GFX/Interface2_0.png
+LoadImage, 3,0xDC0FF0,0,0,0,GFX/Interface5_0.png
+LoadImage, 4,0xDC0FF0,0,0,0,GFX/Interface5_1.png
+LoadImage, 5,0xDC0FF0,0,0,0,GFX/Interface8.png
+LoadImage, 6,0xDC0FF0,0,0,0,GFX/Interface10.png
+LoadImage, 7,0xDC0FF0,0,0,0,GFX/Interface0.png
+LoadImage, 8,0xDC0FF0,0,0,0,GFX/Heart1.png
+LoadImage, 9,0xDC0FF0,0,0,0,GFX/Heart2.png
+LoadImage,10,0xDC0FF0,0,0,0,GFX/Medals0.png
+LoadImage,11,0xDC0FF0,0,0,0,GFX/Medals1.png
+LoadImage,12,0xDC0FF0,0,0,0,GFX/Container0.png
+// ── Initialize vars (HUD) ── //
+$Coins,SetVar,1,0,  0,-1,1,0
+$Lives,SetVar,1,0,  0,-1,1,0
+// $Demos,SetVar,1,0,  0,-1,1,0
+// $Point,SetVar,1,0,  0,-1,1,0
+$Bombs,SetVar,1,0,  0,-1,1,0
+$DCoin,SetVar,1,0,  0,-1,1,0
+$Stars,SetVar,1,0,  0,-1,1,0
+$100Cn,SetVar,1,0,100,-1,1,0
+$SaveX,SetVar,1,0,  0,-1,1,0
+$SaveY,SetVar,1,0,  0,-1,1,0
+
+
+// ── Place Images (HUD) ── //
+$HUDBottom,PlaceSprite, 1,12, 16,520, 0, 0
+$HUDBottom,PlaceSprite, 1, 2, 82,520, 0, 0
+$HUDBottom,PlaceSprite, 1, 6, 82,552, 0, 0
+$HUDBottom,PlaceSprite, 1, 1,102,536, 0, 0
+$HUDBottom,PlaceSprite, 1, 1,102,568, 0, 0
+
+$HUDTop,PlaceSprite, 1, 4,624, 16, 0, 0
+$HUDTop,PlaceSprite, 1,10,624, 50, 0, 0
+#0000 // ── General ───────────────────────────────────── //
+LunaControl,2,1,0,0,0,0
+
+// ── Load Global vars (HUD) ── //
+$Coins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w
+$Lives,LoadGlobalVar,0x00B2C5AC,0,0,0,0,f
+// $Point,LoadGlobalVar,0x00B2C8E4,0,0,0,0,dw
+$Bombs,LoadPlayerVar,0,0x08,0,0,0,w
+$Stars,LoadGlobalVar,0x00B251E0,0,0,0,0,w
+$CCoins,CopyVar,0,0,0,0,0,100Cn
+$CCoins,CopyVar,0,3,0,0,0,Lives
+$CCoins,CopyVar,0,1,0,0,0,Coins
+
+// ── Show vars (HUD) ── //
+// $WallJumpCheck,ShowVar,0,64,64,1,0
+$CCoins,ShowVar,0,122,528,1,0
+$Demos,ShowVar, 0,122,560,1,0
+
+// $SaveX,ShowVar,0,64,64,1,0
+// $SaveY,ShowVar,0,64,96,1,0
+
+// ── Wind SFX ── //
+PlaySFX,0,0,-1,100,1,SFX/Ambi5.ogg
+
+// ── Triggers ── //
+OnPlayerMem,0x13E, 1,0,1000,w
+OnPlayerMem,0x13E,60,1,1003,w
+IfVar,0,0,0,1001,1,WallJumpCheck
+BlockTrigger,0,181,5,1002,0,0
+// OnEvent,0,0,1,1004,0,Music - Start
+MemAssign,0x00A621A0,0,0,0,1,w
+
+#0001
+// TriggerZone, EVENT, TOP, BOTTOM, LEFT, RIGHT, ONCE&REPEAT
+// Left=-198656; Top=-200608; Right=-198624; Bottom=-200112;
+// Left=-198624; Top=-200032; Right=-198016; Bottom=-200000;
+OnEvent,0,0,1,2001,0,Player - Fall
+TriggerZone, 2000, -200608, -200112, -198656, -198624, once
+TriggerZone, 2002, -200032, -200000, -198624, -198016, once 
+
+#0002
+// Left=-198624; Top=-197120; Right=-198016; Bottom=-197088;
+TriggerZone, 2002, -197120, -197088, -198624, -198016, once 
+
+#0003
+// Left=-198368; Top=-196768; Right=-198272; Bottom=-196704;
+// Left=-194976; Top=-196736; Right=-194944; Bottom=-196576;
+TriggerZone, 2003, -196768, -196704, -198368, -198272, once
+TriggerZone, 2004, -196736, -196576, -194976, -194944, once
+
+#1000 // ── Demos Counter ─────────────────────────────── //
+// PlayMusic,0,1,0,0,1,0
+$Demos,SetVar,1,1,1,-1,1,0
+
+#1001 // ── Wall Jump Script ──────────────────────────── //
+$WallJumpCheck,SetVar,1,0,1,-1,0,0
+RunCheat,0,0,0,0,0,newleaf
+RunCheat,0,0,0,0,0,borntoclimb
+
+#1002 // ── Load Player Coords ────────────────────────── //
+$SaveX,LoadPlayerVar,0,0xC0,0,0,1,df
+$SaveY,LoadPlayerVar,0,0xC8,0,0,1,df
+
+#1003 // ── Set Player Coords ─────────────────────────── //
+$SaveX,PlayerMemSet,0,0xC0,0,0,1,df
+$SaveY,PlayerMemSet,0,0xC8,0,0,1,df
+PlayerMemSet,0,0x13E,0,0,1,w
+PlayerMemSet,0,0x13C,0,0,1,b
+PlayerMemSet,0,0x140,60,0,1,w
+
+#1004 // ── Music ─────────────────────────────────────── //
+// SetMusic,1,0,0,0,1,born2climb/MUS/D_MM2_13.mid|s4;x={e}born2climb/MUS/gzdoom.sf2;c0;r0;
+PlayMusic,0,0,0,0,1,0
+
+// #2000 // ── Hide HUD ──────────────────────────────────── //
+// Trigger,TARGET SECTION,CUSTOM EVENT #,-,-,Active time,- 
+// TriggerRandom,2001,2001,2001,2001,70,0
+
+// #2001
+// ModParam,PARAM TO MOD,VALUE,OPERATION,SECTION,Active time,IDENTIFIER
+// ModParam,5,2,2,0,1,HUDTop
+// ModParam,5,2,1,0,1,HUDBottom
+// ModParam,3,2,1,0,1,CCoins
+// ModParam,3,2,1,0,1,Demos
+
+// #2002 // ── Show HUD ──────────────────────────────────── //
+// TriggerRandom,2003,2003,2003,2003,70,0
+
+// #2003 
+// ModParam,4,2,1,0,1,HUDTop
+// ModParam,4,2,2,0,1,HUDBottom
+// ModParam,3,2,2,0,1,CCoins
+// ModParam,3,2,2,0,1,Demos
+
+#2000 // ── Cutscene #1 ───────────────────────────────── //
+TriggerSMBXEvent,0,0,0,0,1,Player - Cutscene 1 Start
+// Trigger, 0, 2000,0,0,1,0
+
+#2001
+PlaySFX,0,0,0,100,1,SFX/player-fall.ogg
+
+#2002
+PlayerMemSet,0,0x15A,1,1,1,w
+
+#2003 // ── Cutscene #1 End ───────────────────────────── //
+SFX,0,4,0,0,1,0
+CancelSMBXEvent,0,0,0,0,0,Player - Fall
+TriggerSMBXEvent,0,0,0,0,1,Player - Cutscene 1 End
+
+#2004 // ── Show Walljump hint ────────────────────────── //
+TriggerSMBXEvent,0,0,0,0,1,e_show_hint1_1
