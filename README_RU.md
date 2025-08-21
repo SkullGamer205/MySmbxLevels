@@ -3,7 +3,7 @@
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 <p align="center">
-<a href="https://github.com/SkullGamer205/MySmbxLevels"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.readme.d/images/main-logo.png" alt="Logo"></a>
+<a href="https://github.com/SkullGamer205/MySmbxLevels"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.readme.d/_images/logo.png" alt="Logo"></a>
 </p>
 <p align="center"><b>
 SkullGamer#205's Level Collection
