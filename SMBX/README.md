@@ -3,7 +3,7 @@
 
 # Chilly morning.
 <p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4462"><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/SMBX/completed-levels/SkullGamer205 - Chilly morning./logo.png" alt="Chilly morning"></a>
+<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4462"><img src="./completed-levels/SkullGamer205 - Chilly morning./logo.png" alt="Chilly morning"></a>
 </p>
 
 <a><img src="https://raw.githubusercontent.com/SkullGamer205/MySmbxLevels/main/.readme.d/_images/snes/smb3/logo.png" alt="Super Mario Bros 3 (SNES)"></a>
