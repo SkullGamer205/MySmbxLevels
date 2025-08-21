@@ -17,7 +17,7 @@
 <a><img src="../.readme.d/_images/snes/smw/logo.png" alt="Super Mario World (SNES)"></a>
 # Complex network of sewer pipes
 <p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4510"><img src="./completed-levels/SkullGamer205 - Complex network of sewer pipes/logo.png" alt="Complex network of sewer pipes"></a>
+<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4510"><img src="./completed-levels/SkullGamer205%20-%20Complex%20network%20of%20sewer%20pipes/logo.png" alt="Complex network of sewer pipes"></a>
 </p>
 
 <a><img src="../.readme.d/_images/snes/smb3/logo.png" alt="Super Mario Bros 3 (SNES)"></a>
