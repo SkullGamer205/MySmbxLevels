@@ -40,6 +40,7 @@ PlaceSprite,1,9,266,0,0.0                                                       
 LunaControl,2,1,0,0,0,0                                                                                                 // Deactivate Default HUD
 FilterReservePowerup,0,0,0,0,0,0                                                                                        // Block Reverse Box
 
+ScreenBorderTrigger,1011,1012,1013,1014,0,16
                                                                                                                         // Load User Values
 $CurrentCoins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w                                                                            // Current Coins
 $CurrentPoint,LoadGlobalVar,0x00B2C8E4,0,0,0,0,dw                                                                           // Current Points
@@ -86,4 +87,18 @@ PlaceSprite,1,7,606,584,0,0
 PlaceSprite,1,7,624,584,0,0
 #1010
 PlaceSprite,1,7,642,584,0,0
+#END
+
+#1011
+PushScreenBoundary,1,2,0,0,1,-800
+PushScreenBoundary,1,3,0,0,1,-800
+#1012
+PushScreenBoundary,1,0,0,0,1,-608
+PushScreenBoundary,1,1,0,0,1,-608
+#1013
+PushScreenBoundary,1,2,0,0,1,800
+PushScreenBoundary,1,3,0,0,1,800
+#1014
+PushScreenBoundary,1,0,0,0,1,608
+PushScreenBoundary,1,1,0,0,1,608
 #END
