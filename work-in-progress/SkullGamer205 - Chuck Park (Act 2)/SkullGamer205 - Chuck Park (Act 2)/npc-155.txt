@@ -1,3 +1,0 @@
-grabside=0
-grabtop=0
-nohurt=1

@@ -1,7 +1,0 @@
-width=64
-height=32
-gfxwidth=108
-gfxheight=74
-gfxoffsety=32
-jumphurt=1
-noyoshi=1

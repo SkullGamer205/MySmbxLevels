@@ -1,8 +1,0 @@
-height=42
-gfxoffsety=1
-frames=4
-framespeed=4
-nofireball=1
-noyoshi=1
-speed=0
-jumphurt=1

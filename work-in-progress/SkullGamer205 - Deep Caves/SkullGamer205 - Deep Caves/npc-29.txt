@@ -1,5 +1,0 @@
-width=62
-height=44
-gfxwidth=62
-gfxheight=44
-nofireball=1
