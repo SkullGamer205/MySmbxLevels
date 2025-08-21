@@ -11,7 +11,7 @@
 
 # Funny Night
 <p align="center">
-<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4463"><img src=".completed-levels/SkullGamer205 - Funny night/logo.png" alt="Funny Night"></a>
+<a href="https://wohlsoft.ru/forum/viewtopic.php?f=18&t=4463"><img src=".completed-levels/SkullGamer205%20-%20Funny%20night/logo.png" alt="Funny Night"></a>
 </p>
 
 <a><img src="../.readme.d/_images/snes/smw/logo.png" alt="Super Mario World (SNES)"></a>
