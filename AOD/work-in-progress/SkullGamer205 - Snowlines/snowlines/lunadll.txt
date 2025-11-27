@@ -1,0 +1,14 @@
+#-001 // ── Pre-Start Scripts ─────────────────────────── //
+
+
+
+#0000 // ── General ───────────────────────────────────── //
+LunaControl,2,1,0,0,0,0
+
+// ── Triggers ── // 
+IfVar,0,0,0,1001,1,WallJumpCheck
+
+#1001 // ── Wall Jump Script ──────────────────────────── //
+$WallJumpCheck,SetVar,1,0,1,-1,0,0
+RunCheat,0,0,0,0,0,newleaf
+RunCheat,0,0,0,0,0,borntoclimb
