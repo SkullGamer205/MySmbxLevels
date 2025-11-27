@@ -3,7 +3,7 @@
 
 
 #0000 // ── General ───────────────────────────────────── //
-LunaControl,2,1,0,0,0,0
+LunaControl,1,1,0,0,0,0
 
 // ── Triggers ── // 
 IfVar,0,0,0,1001,1,WallJumpCheck
