@@ -8,7 +8,23 @@ LunaControl,1,1,0,0,0,0
 // ── Triggers ── // 
 IfVar,0,0,0,1001,1,WallJumpCheck
 
+#0005 // ── Section 5 ─────────────────────────────────── //
+// TriggerZone, EVENT, TOP, BOTTOM, LEFT, RIGHT, ONCE&REPEAT
+// Left=-182080; Top=-202112; Right=-181952; Bottom=-202080;
+TriggerZone, 2001, -202112, -202080, -182080, -181952, once
+
+#0006 // ── Section 6 ─────────────────────────────────── //
+// TriggerZone, EVENT, TOP, BOTTOM, LEFT, RIGHT, ONCE&REPEAT
+// Left=-182080; Top=-202080; Right=-181952; Bottom=-202048;
+TriggerZone, 2002, -202080, -202048, -182080, -181952, once
+
 #1001 // ── Wall Jump Script ──────────────────────────── //
 $WallJumpCheck,SetVar,1,0,1,-1,0,0
 RunCheat,0,0,0,0,0,newleaf
 RunCheat,0,0,0,0,0,borntoclimb
+
+#2001 // ── Change section ────────────────────────────── //
+PlayerMemSet, 0, 0x15A, 1, 1, 1, w
+
+#2002 // ── Go back ───────────────────────────────────── //
+PlayerMemSet, 0, 0x15A, 1, 2, 1, w
