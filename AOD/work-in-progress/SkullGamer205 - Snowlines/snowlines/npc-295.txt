@@ -9,6 +9,7 @@ grabtop=0
 jumphurt=1
 nohurt=1
 speed=0
+noblockcollision=0
 noyoshi=1
 nofireball=1
 nogravity=1
