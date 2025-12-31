@@ -1,12 +1,20 @@
 #-001 // ── Pre-Start Scripts ─────────────────────────── //
 
-
-
 #0000 // ── General ───────────────────────────────────── //
 LunaControl,1,1,0,0,0,0
 
 // ── Triggers ── // 
 IfVar,0,0,0,1001,1,WallJumpCheck
+
+$Secret1,ShowVar,0,96,96,1,0
+
+#0001 // ── Section 1 ─────────────────────────────────── //
+// TriggerZone, EVENT, TOP, BOTTOM, LEFT, RIGHT, ONCE&REPEAT
+// Left=-199888; Top=-200160; Right=-199664; Bottom=-199968;
+TriggerZone, 2003, -200160, -199968, -199888, -199664, repeat
+
+// Left=-199648; Top=-200224; Right=-199520; Bottom=-199968;
+TriggerZone, 2004, -200224, -199968, -199648, -199520, repeat
 
 #0005 // ── Section 5 ─────────────────────────────────── //
 // TriggerZone, EVENT, TOP, BOTTOM, LEFT, RIGHT, ONCE&REPEAT
@@ -28,3 +36,9 @@ PlayerMemSet, 0, 0x15A, 1, 1, 1, w
 
 #2002 // ── Go back ───────────────────────────────────── //
 PlayerMemSet, 0, 0x15A, 1, 2, 1, w
+
+#2003 // ── Secret 1 (Enable) ─────────────────────────── //
+TriggerSMBXEvent,0,0,0,0,1,Secret1 - Enable
+
+#2004 // ── Secret 1 (Disable) ────────────────────────── //
+TriggerSMBXEvent,0,0,0,0,1,Secret1 - Disable
