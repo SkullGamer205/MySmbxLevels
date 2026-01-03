@@ -6230,14 +6230,14 @@ LR:"SnowBlock9";
 LR:"SnowBlock10";
 LR:"SnowBlock11";
 LR:"SnowBlock12";
-LR:"Hint1-1";
-LR:"Hint1-2";
-LR:"Hint1-3";
-LR:"Hint1-4";
-LR:"Hint1-5";
-LR:"Hint1-6";
-LR:"Hint1-7";
-LR:"Hint1-8";
+LR:"Hint1-1";HD:1;
+LR:"Hint1-2";HD:1;
+LR:"Hint1-3";HD:1;
+LR:"Hint1-4";HD:1;
+LR:"Hint1-5";HD:1;
+LR:"Hint1-6";HD:1;
+LR:"Hint1-7";HD:1;
+LR:"Hint1-8";HD:1;
 LAYERS_END
 EVENTS_CLASSIC
 ET:"Level - Start";LH:["Orange Goopa (Orange Switch)"];LS:["Secret 1","SnowBlock1","SnowBlock2","SnowBlock3","SnowBlock6","SnowBlock5","SnowBlock4","SnowBlock7","SnowBlock8","SnowBlock9","SnowBlock10","SnowBlock11","SnowBlock12","Hint1-1","Hint1-2","Hint1-3","Hint1-4","Hint1-5","Hint1-6","Hint1-7","Hint1-8"];SSS:["ID\:7\;SL\:-172000\;ST\:-202872\;SB\:-202272\;SR\:-171200\;"];DS:1;AS:0;AX:0;AY:0;
