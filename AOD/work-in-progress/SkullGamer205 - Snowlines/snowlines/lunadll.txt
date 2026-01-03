@@ -6,30 +6,30 @@ LunaControl,1,1,0,0,0,0
 // ── Triggers ── // 
 IfVar,0,0,0,1001,1,WallJumpCheck
 
-$Secret1,ShowVar,0,96,96,1,0
-
 #0001 // ── Section 1 ─────────────────────────────────── //
 // TriggerZone, EVENT, TOP, BOTTOM, LEFT, RIGHT, ONCE&REPEAT
-// Left=-199888; Top=-200160; Right=-199664; Bottom=-199968;
-TriggerZone, 2003, -200160, -199968, -199888, -199664, repeat
 
-// Left=-199648; Top=-200224; Right=-199520; Bottom=-199968;
+// ── Secret 1 ── //
+TriggerZone, 2003, -200160, -199968, -199888, -199664, repeat
 TriggerZone, 2004, -200224, -199968, -199648, -199520, repeat
 
+// ── Hint 1 ── //
+TriggerZone, 2005, -200320, -200064, -197472, -197216, once
+
 #0005 // ── Section 5 ─────────────────────────────────── //
-// TriggerZone, EVENT, TOP, BOTTOM, LEFT, RIGHT, ONCE&REPEAT
-// Left=-182080; Top=-202112; Right=-181952; Bottom=-202080;
 TriggerZone, 2001, -202112, -202080, -182080, -181952, once
 
 #0006 // ── Section 6 ─────────────────────────────────── //
-// TriggerZone, EVENT, TOP, BOTTOM, LEFT, RIGHT, ONCE&REPEAT
-// Left=-182080; Top=-202080; Right=-181952; Bottom=-202048;
 TriggerZone, 2002, -202080, -202048, -182080, -181952, once
+
+
 
 #1001 // ── Wall Jump Script ──────────────────────────── //
 $WallJumpCheck,SetVar,1,0,1,-1,0,0
 RunCheat,0,0,0,0,0,newleaf
 RunCheat,0,0,0,0,0,borntoclimb
+
+
 
 #2001 // ── Change section ────────────────────────────── //
 PlayerMemSet, 0, 0x15A, 1, 1, 1, w
@@ -42,3 +42,6 @@ TriggerSMBXEvent,0,0,0,0,1,Secret1 - Enable
 
 #2004 // ── Secret 1 (Disable) ────────────────────────── //
 TriggerSMBXEvent,0,0,0,0,1,Secret1 - Disable
+
+#2005 // ── Hint 1 (SMBX Event) ───────────────────────── //
+TriggerSMBXEvent,0,0,0,0,1,Hint1 - Show
