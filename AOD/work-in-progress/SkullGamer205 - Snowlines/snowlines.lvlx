@@ -11,7 +11,6 @@ SC:5;L:-182400;R:-181600;T:-203360;B:-202080;MZ:24;MF:"snowlines/mus/bloodlines.
 SC:6;L:-180800;R:-172800;T:-202808;B:-202208;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:7;
 SC:7;L:-172000;R:-160480;T:-202872;B:-202272;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;
 SC:8;L:-160000;R:-156000;T:-202936;B:-202336;MZ:0;MF:"snowlines/mus/bloodlines.spc";BG:49;
-SC:9;L:-180800;R:-180000;T:-204824;B:-204224;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;
 SECTION_END
 STARTPOINT
 ID:2;X:-199852;Y:-200252;D:1;
