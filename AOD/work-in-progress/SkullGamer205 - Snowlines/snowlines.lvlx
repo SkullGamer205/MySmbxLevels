@@ -143,7 +143,7 @@ ID:4;X:-197920;Y:-200480;W:32;H:32;ED:"SnowBlock9";EH:"SnowBlock9";
 ID:5;X:-197888;Y:-200480;W:32;H:32;CN:-1;ED:"SnowBlock10";EH:"SnowBlock10";
 ID:5;X:-197856;Y:-200480;W:32;H:32;CN:-1;ED:"SnowBlock11";EH:"SnowBlock11";
 ID:5;X:-197152;Y:-200512;W:32;H:32;CN:-1;
-ID:5;X:-195328;Y:-200352;W:32;H:32;CN:-1;
+ID:5;X:-195328;Y:-200352;W:32;H:32;CN:-1;ED:"SnowBlock12";EH:"SnowBlock12";
 ID:5;X:-194976;Y:-199552;W:32;H:32;CN:-1;
 ID:5;X:-194336;Y:-199776;W:32;H:32;CN:-1;
 ID:145;X:-193696;Y:-200256;W:64;H:32;
@@ -5844,6 +5844,15 @@ ID:130;X:-193664;Y:-200288;ZP:1;
 ID:130;X:-193696;Y:-200288;ZP:1;
 ID:130;X:-193472;Y:-200320;ZP:1;
 ID:130;X:-193440;Y:-200320;ZP:1;
+ID:131;X:-193408;Y:-200320;ZP:1;
+ID:129;X:-193504;Y:-200320;ZP:1;
+ID:129;X:-193728;Y:-200288;ZP:1;
+ID:131;X:-193632;Y:-200288;ZP:1;
+ID:129;X:-195424;Y:-200352;ZP:1;
+ID:129;X:-196576;Y:-200256;ZP:1;
+ID:131;X:-196480;Y:-200256;ZP:1;
+ID:130;X:-195328;Y:-200352;ZP:1;LR:"SnowBlock12";
+ID:131;X:-195296;Y:-200352;ZP:1;LR:"SnowBlock12";
 BGO_END
 NPC
 ID:1;X:-198592;Y:-200256;D:-1;
@@ -6039,6 +6048,13 @@ ID:10;X:-193310;Y:-200352;D:-1;
 ID:10;X:-193246;Y:-200384;D:-1;
 ID:10;X:-193182;Y:-200416;D:-1;
 ID:6;X:-192896;Y:-200160;D:-1;
+ID:10;X:-192734;Y:-200320;D:-1;
+ID:10;X:-192734;Y:-200288;D:-1;
+ID:10;X:-192734;Y:-200128;D:-1;
+ID:10;X:-192734;Y:-200160;D:-1;
+ID:10;X:-192734;Y:-200096;D:-1;
+ID:10;X:-192606;Y:-200160;D:-1;
+ID:258;X:-192734;Y:-200064;D:-1;
 NPC_END
 DOORS
 IX:-194896;IY:-200384;OX:-194896;OY:-199520;DT:1;ID:3;OD:1;
@@ -6068,9 +6084,10 @@ LR:"SnowBlock8";
 LR:"SnowBlock9";
 LR:"SnowBlock10";
 LR:"SnowBlock11";
+LR:"SnowBlock12";
 LAYERS_END
 EVENTS_CLASSIC
-ET:"Level - Start";LH:["Orange Goopa (Orange Switch)"];LS:["Secret 1","SnowBlock1","SnowBlock2","SnowBlock3","SnowBlock6","SnowBlock5","SnowBlock4"];SSS:["ID\:7\;SL\:-172000\;ST\:-202872\;SB\:-202272\;SR\:-171200\;"];DS:1;AS:0;AX:0;AY:0;
+ET:"Level - Start";LH:["Orange Goopa (Orange Switch)"];LS:["Secret 1","SnowBlock1","SnowBlock2","SnowBlock3","SnowBlock6","SnowBlock5","SnowBlock4","SnowBlock7","SnowBlock8","SnowBlock9","SnowBlock10","SnowBlock11","SnowBlock12"];SSS:["ID\:7\;SL\:-172000\;ST\:-202872\;SB\:-202272\;SR\:-171200\;"];DS:1;AS:0;AX:0;AY:0;
 ET:"P Switch - Start";AS:0;AX:0;AY:0;
 ET:"P Switch - End";AS:0;AX:0;AY:0;
 ET:"Orange Switch (Activated)";LS:["Orange Goopa (Orange Switch)"];AS:0;AX:0;AY:0;
@@ -6094,4 +6111,5 @@ ET:"SnowBlock8";LH:["SnowBlock8"];DS:1;AS:0;AX:0;AY:0;
 ET:"SnowBlock9";LH:["SnowBlock9"];DS:1;AS:0;AX:0;AY:0;
 ET:"SnowBlock10";LH:["SnowBlock10"];DS:1;AS:0;AX:0;AY:0;
 ET:"SnowBlock11";LH:["SnowBlock11"];DS:1;AS:0;AX:0;AY:0;
+ET:"SnowBlock12";LH:["SnowBlock12"];DS:1;AS:0;AX:0;AY:0;
 EVENTS_CLASSIC_END
