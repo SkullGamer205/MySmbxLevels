@@ -23,7 +23,8 @@ TriggerZone, 2001, -202112, -202080, -182080, -181952, once
 #0006 // ── Section 6 ─────────────────────────────────── //
 TriggerZone, 2002, -202080, -202048, -182080, -181952, once
 
-
+#0008 // ── Section 8 ─────────────────────────────────── //
+TriggerZone, 2008, -202896, -202544, -171264, -171232, once
 
 #1001 // ── Wall Jump Script ──────────────────────────── //
 $WallJumpCheck,SetVar,1,0,1,-1,0,0
@@ -49,3 +50,7 @@ TriggerSMBXEvent,0,0,0,0,1,Hint1 - Show
 
 #2006 // ── Hint 2 (SMBX Event) ───────────────────────── //
 TriggerSMBXEvent,0,0,0,0,1,Hint2 - Show
+
+
+#2008 // ── Enable Autoscroll & Snowballs ─────────────── //
+TriggerSMBXEvent,0,0,0,0,1,Section 7 - Autoscroll [1b/s]
