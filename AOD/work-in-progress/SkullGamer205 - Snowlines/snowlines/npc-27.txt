@@ -1,0 +1,13 @@
+gfxoffsetx=0
+gfxoffsety=0
+gfxwidth=32
+gfxheight=32
+npcblock=0
+jumphurt=0
+nohurt=1
+speed=1.38778e-16
+noblockcollision=1
+nogravity=1
+frames=1
+framestyle=0
+grid=32
