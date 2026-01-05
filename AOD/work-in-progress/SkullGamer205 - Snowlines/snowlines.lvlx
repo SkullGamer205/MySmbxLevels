@@ -11307,15 +11307,6 @@ ID:91;X:-158688;Y:-202592;
 ID:90;X:-158496;Y:-202560;
 ID:89;X:-158496;Y:-202624;
 ID:91;X:-158496;Y:-202592;
-ID:115;X:-158048;Y:-202592;
-ID:115;X:-158080;Y:-202560;
-ID:117;X:-157952;Y:-202560;
-ID:116;X:-157984;Y:-202560;
-ID:116;X:-158016;Y:-202560;
-ID:116;X:-158048;Y:-202560;
-ID:116;X:-158016;Y:-202592;
-ID:117;X:-157984;Y:-202592;
-ID:126;X:-158032;Y:-202624;
 ID:125;X:-158176;Y:-202592;
 ID:125;X:-157856;Y:-202592;
 ID:55;X:-199840;Y:-200128;ZP:1;LR:"Secret 1";
@@ -12158,6 +12149,9 @@ ID:130;X:-157792;Y:-202560;ZP:1;
 ID:1;X:-158880;Y:-202752;
 ID:1;X:-158688;Y:-202752;
 ID:1;X:-158496;Y:-202752;
+ID:85;X:-158288;Y:-202624;
+ID:8;X:-158464;Y:-202592;ZP:-2;
+ID:32;X:-158096;Y:-202656;
 BGO_END
 NPC
 ID:1;X:-198592;Y:-200256;D:-1;
@@ -12662,6 +12656,9 @@ ID:258;X:-160798;Y:-202560;D:-1;
 ID:258;X:-160798;Y:-202688;D:-1;
 ID:10;X:-160766;Y:-202688;D:-1;
 ID:6;X:-158496;Y:-202432;D:-1;
+ID:27;X:-158880;Y:-202592;D:-1;FD:1;NM:1;
+ID:27;X:-158688;Y:-202592;D:-1;FD:1;NM:1;
+ID:27;X:-158496;Y:-202592;D:-1;FD:1;NM:1;
 NPC_END
 DOORS
 IX:-194896;IY:-200384;OX:-194896;OY:-199520;DT:1;ID:3;OD:1;
@@ -12714,7 +12711,7 @@ LAYERS_END
 EVENTS_CLASSIC
 ET:"Level - Start";LH:["Orange Goopa (Orange Switch)","InfPwrSpawner1","Snowballs"];LS:["Secret 1","SnowBlock1","SnowBlock2","SnowBlock3","SnowBlock6","SnowBlock5","SnowBlock4","SnowBlock7","SnowBlock8","SnowBlock9","SnowBlock10","SnowBlock11","SnowBlock12","Hint1-1","Hint1-2","Hint1-3","Hint1-4","Hint1-5","Hint1-6","Hint1-7","Hint1-8","Hint2-1","Hint2-2","Hint2-3","Hint2-4","Hint2-5","SnowBlock13","SnowBlock14","SnowBlock15"];SSS:["ID\:7\;SL\:-172000\;ST\:-202872\;SB\:-202272\;SR\:-171200\;"];DS:1;AS:0;AX:0;AY:0;
 ET:"P Switch - Start";AS:0;AX:0;AY:0;
-ET:"P Switch - End";AS:0;AX:0;AY:0;
+ET:"P Switch - End";SD:31;AS:0;AX:0;AY:0;
 ET:"Orange Switch (Activated)";LS:["Orange Goopa (Orange Switch)"];AS:0;AX:0;AY:0;
 ET:"Section 7 - Autoscroll \[1b/s\]";SSS:["ID\:7\;AS\:1\;AX\:1\;","ID\:8\;AX\:0.492308\;"];TE:"Section 7 - Autoscroll \[2b/s\]";TD:5;ML:"Snowballs";MX:1;MY:0;AS:0;AX:0;AY:0;
 ET:"Section 7 - Autoscroll \[2b/s\]";SSS:["ID\:7\;AS\:1\;AX\:2\;"];TE:"Section 7 - Autoscroll \[3b/s\]";TD:5;ML:"Snowballs";MX:2;MY:0;AS:0;AX:0;AY:0;
