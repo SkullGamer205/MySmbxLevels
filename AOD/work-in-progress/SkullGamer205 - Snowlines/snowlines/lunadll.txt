@@ -60,10 +60,15 @@ TriggerZone, 2004, -200224, -199968, -199648, -199520, repeat
 
 // ── Hint 1 ── //
 TriggerZone, 2005, -200320, -200064, -197472, -197216, once
+
+// ── Hint 2 ── //
 TriggerZone, 2006, -200640, -200416, -192960, -192800, once
 
 #0005 // ── Section 5 ─────────────────────────────────── //
 TriggerZone, 2001, -202112, -202080, -182080, -181952, once
+
+// ── Hint 3 ── //
+TriggerZone, 2007, -202016, -201632, -184256, -183968, once
 
 #0006 // ── Section 6 ─────────────────────────────────── //
 TriggerZone, 2002, -202080, -202048, -182080, -181952, once
@@ -104,6 +109,8 @@ TriggerSMBXEvent,0,0,0,0,1,Hint1 - Show
 #2006 // ── Hint 2 (SMBX Event) ───────────────────────── //
 TriggerSMBXEvent,0,0,0,0,1,Hint2 - Show
 
+#2007 // ── Hint 2 (SMBX Event) ───────────────────────── //
+TriggerSMBXEvent,0,0,0,0,1,Hint3 - Show
 
 #2008 // ── Enable Autoscroll & Snowballs ─────────────── //
 TriggerSMBXEvent,0,0,0,0,1,Section 7 - Autoscroll [1b/s]
