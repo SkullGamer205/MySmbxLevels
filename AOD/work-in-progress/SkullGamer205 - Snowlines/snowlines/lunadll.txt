@@ -2,6 +2,8 @@
 // ── Clear Lives ── //
 MemAssign,0x00B2C5Ac,0,0,0,1,f
 
+LoadImage, 1,0xDC0FF0,0,0,0,gfx/TextBox.png
+
 // ── Initialize vars (HUD) ── //
 $Coins, SetVar,1,0,  0,-1,1,0
 $Lives, SetVar,1,0,  0,-1,1,0
@@ -37,8 +39,8 @@ $Point,  ShowVar, 0,479,47,6,0
 
 $HUDMin, ShowVar, 0,622,50,6,0
 $HUDSec, ShowVar, 0,654,50,6,0
-ShowText,0,640,50,3,0,"
-ShowText,0,690,50,3,0,'
+ShowText,0,640,50,3,0,'
+ShowText,0,690,50,3,0,"
 
 // ── Triggers ── // 
 OnPlayerMem,0x13E, 60,0,1000,w
@@ -68,6 +70,11 @@ TriggerZone, 2002, -202080, -202048, -182080, -181952, once
 
 #0008 // ── Section 8 ─────────────────────────────────── //
 TriggerZone, 2008, -202896, -202544, -171264, -171232, once
+
+#0009 // ── Section 9 ─────────────────────────────────── //
+TriggerZone,2012,-202624,-202528,-158912,-158816,repeat
+TriggerZone,2013,-202624,-202528,-158720,-158624,repeat
+TriggerZone,2014,-202624,-202528,-158528,-158432,repeat
 
 #1000 // ── Demos Counter ─────────────────────────────── //
 $Demos,SetVar,1,1,1,-1,1,0
@@ -113,7 +120,21 @@ DeleteEventsFrom,2010,0,0,0,1,0
 TriggerSMBXEvent,0,0,0,0,1,Onion3 - Disable
 DeleteEventsFrom,2011,0,0,0,1,0
 
+#2012 // ── Collumn 1 ─────────────────────────────────── //
+PlaceSprite, 1,1, 200,480, 2, 0
+ShowText,0,250,500,4,1,Get 5 Dragon Coins
+ShowText,0,250,522,4,1,To get this onion.
 
+#2013 // ── Collumn 2 ─────────────────────────────────── //
+PlaceSprite, 1,1, 200,480, 2, 0
+ShowText,0,150,500,4,1,Complete level without death
+ShowText,0,250,522,4,1,To get this onion.
+
+#2014 // ── Collumn 3 ─────────────────────────────────── //
+PlaceSprite, 1,1, 200,480, 2, 0
+ShowText,0,210,500,4,1,Reach this area faster
+ShowText,0,260,522,4,1,Than 5'30" to get
+ShowText,0,320,544,4,1,this onion.
 
 #2015 // ── Custom watch system (add every second) ────── //
 $Watch,  SetVar,0,1,1,0,1,0
