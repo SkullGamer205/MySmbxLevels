@@ -12365,7 +12365,6 @@ ID:10;X:-180990;Y:-201728;D:-1;
 ID:10;X:-184606;Y:-201760;D:-1;
 ID:10;X:-184702;Y:-201760;D:-1;
 ID:10;X:-180734;Y:-201760;D:-1;
-ID:303;X:-184160;Y:-201760;D:-1;LR:"Orange Goopa (Orange Switch)";
 ID:10;X:-188382;Y:-201760;D:-1;
 ID:10;X:-184798;Y:-201760;D:-1;
 ID:10;X:-188286;Y:-201760;D:-1;
@@ -12675,7 +12674,7 @@ LAYERS
 LR:"Default";
 LR:"Destroyed Blocks";HD:1;
 LR:"Spawned NPCs";
-LR:"Orange Goopa (Orange Switch)";HD:1;
+LR:"Orange Goopa (Orange Switch)";
 LR:"Secret 1";
 LR:"SnowBlock1";
 LR:"SnowBlock2";
