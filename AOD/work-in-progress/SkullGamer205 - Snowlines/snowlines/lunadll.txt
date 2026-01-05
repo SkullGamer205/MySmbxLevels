@@ -1,9 +1,37 @@
 #-001 // ── Pre-Start Scripts ─────────────────────────── //
+// ── Clear Lives ── //
+MemAssign,0x00B2C5Ac,0,0,0,1,f
+
+// ── Initialize vars (HUD) ── //
+$Coins,SetVar,1,0,  0,-1,1,0
+$Lives,SetVar,1,0,  0,-1,1,0
+$100Cn,SetVar,1,0,100,-1,1,0
+// $Demos,SetVar,1,0,  0,-1,1,0
+$Point,SetVar,1,0,  0,-1,1,0
+$Stars,SetVar,1,0,  0,-1,1,0
 
 #0000 // ── General ───────────────────────────────────── //
 LunaControl,1,1,0,0,0,0
 
+// ── Load Global vars (HUD) ── //
+$Coins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w
+$Lives,LoadGlobalVar,0x00B2C5AC,0,0,0,0,f
+$Point,LoadGlobalVar,0x00B2C8E4,0,0,0,0,dw
+$Stars,LoadGlobalVar,0x00B251E0,0,0,0,0,w
+
+// ── Custom Coins (HUD) ── //
+$CCoins,CopyVar,0,0,0,0,0,100Cn
+$CCoins,CopyVar,0,3,0,0,0,Lives
+$CCoins,CopyVar,0,1,0,0,0,Coins
+
+// ── Show vars (HUD) ── //
+$Demos,  ShowVar, 0,296,27,6,0
+$Stars,  ShowVar, 0,296,47,6,0
+$CCoins, ShowVar, 0,533,27,6,0
+$Point,  ShowVar, 0,479,47,6,0
+
 // ── Triggers ── // 
+OnPlayerMem,0x13E, 60,0,1000,w
 IfVar,0,0,0,1001,1,WallJumpCheck
 
 #0001 // ── Section 1 ─────────────────────────────────── //
@@ -25,6 +53,9 @@ TriggerZone, 2002, -202080, -202048, -182080, -181952, once
 
 #0008 // ── Section 8 ─────────────────────────────────── //
 TriggerZone, 2008, -202896, -202544, -171264, -171232, once
+
+#1000 // ── Demos Counter ─────────────────────────────── //
+$Demos,SetVar,1,1,1,-1,1,0
 
 #1001 // ── Wall Jump Script ──────────────────────────── //
 $WallJumpCheck,SetVar,1,0,1,-1,0,0
