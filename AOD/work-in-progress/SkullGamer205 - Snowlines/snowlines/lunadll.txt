@@ -26,13 +26,14 @@ $CCoins,CopyVar,0,1,0,0,0,Coins
 
 // ── Show vars (HUD) ── //
 $Demos,  ShowVar, 0,296,27,6,0
-$Stars,  ShowVar, 0,296,47,6,0
 $CCoins, ShowVar, 0,533,27,6,0
 $Point,  ShowVar, 0,479,47,6,0
 
 // ── Triggers ── // 
 OnPlayerMem,0x13E, 60,0,1000,w
 IfVar,0,0,0,1001,1,WallJumpCheck
+IfVar,0,1,0,2010,0,Demos
+IfVar,0,1,0,2009,0,Stars
 
 #0001 // ── Section 1 ─────────────────────────────────── //
 // TriggerZone, EVENT, TOP, BOTTOM, LEFT, RIGHT, ONCE&REPEAT
@@ -85,3 +86,13 @@ TriggerSMBXEvent,0,0,0,0,1,Hint2 - Show
 
 #2008 // ── Enable Autoscroll & Snowballs ─────────────── //
 TriggerSMBXEvent,0,0,0,0,1,Section 7 - Autoscroll [1b/s]
+
+#2009 // ── Show stars (HUD) ──────────────────────────── //
+$Stars,  ShowVar, 0,296,47,6,1
+
+#2010 // ── Onion2 - Disable ──────────────────────────── //
+TriggerSMBXEvent,0,0,0,0,1,Onion2 - Disable
+DeleteEventsFrom,2010,0,0,0,1,0
+
+// #2011 // ── Onion3 - Disable ──────────────────────────── //
+// TriggerSMBXEvent,0,0,0,0,1,Onion3 - Disable
