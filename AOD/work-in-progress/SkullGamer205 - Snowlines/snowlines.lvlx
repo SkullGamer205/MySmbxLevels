@@ -12669,7 +12669,7 @@ IX:-185904;IY:-201184;OX:-185904;OY:-201632;DT:1;ID:1;OD:3;TE:5;
 IX:-180080;IY:-201792;OX:-180624;OY:-202400;DT:2;ID:1;OD:1;TW:1;
 IX:-174832;IY:-202400;OX:-174832;OY:-202400;DT:1;ID:3;OD:3;PT:1;PS:14;
 IX:-172976;IY:-202560;OX:-171856;OY:-202656;DT:2;ID:1;OD:1;
-IX:-160656;IY:-202528;OX:-159856;OY:-202592;DT:2;ID:1;OD:1;
+IX:-160656;IY:-202528;OX:-159856;OY:-202592;DT:2;ID:1;OD:1;EE:"Level - End";EEX:"\[Нет\]";
 DOORS_END
 LAYERS
 LR:"Default";
@@ -12718,6 +12718,7 @@ EVENTS_CLASSIC
 ET:"Level - Start";LH:["Orange Goopa (Orange Switch)","InfPwrSpawner1","Snowballs","Onion1(R)","Onion2(F)","Onion3(F)"];LS:["Secret 1","SnowBlock1","SnowBlock2","SnowBlock3","SnowBlock6","SnowBlock5","SnowBlock4","SnowBlock7","SnowBlock8","SnowBlock9","SnowBlock10","SnowBlock11","SnowBlock12","Hint1-1","Hint1-2","Hint1-3","Hint1-4","Hint1-5","Hint1-6","Hint1-7","Hint1-8","Hint2-1","Hint2-2","Hint2-3","Hint2-4","Hint2-5","SnowBlock13","SnowBlock14","SnowBlock15","Onion2(R)","Onion3(R)","Onion1(F)"];SSS:["ID\:7\;SL\:-172000\;ST\:-202872\;SB\:-202272\;SR\:-171200\;"];DS:1;AS:0;AX:0;AY:0;
 ET:"P Switch - Start";AS:0;AX:0;AY:0;
 ET:"P Switch - End";SD:31;AS:0;AX:0;AY:0;
+ET:"Level - End";SD:69;SSS:["ID\:7\;MI\:0\;"];AS:0;AX:0;AY:0;
 ET:"Orange Switch (Activated)";LS:["Orange Goopa (Orange Switch)"];AS:0;AX:0;AY:0;
 ET:"Section 7 - Autoscroll \[1b/s\]";SSS:["ID\:7\;AS\:1\;AX\:1\;","ID\:8\;AX\:0.492308\;"];TE:"Section 7 - Autoscroll \[2b/s\]";TD:5;ML:"Snowballs";MX:1;MY:0;AS:0;AX:0;AY:0;
 ET:"Section 7 - Autoscroll \[2b/s\]";SSS:["ID\:7\;AS\:1\;AX\:2\;"];TE:"Section 7 - Autoscroll \[3b/s\]";TD:5;ML:"Snowballs";MX:2;MY:0;AS:0;AX:0;AY:0;
