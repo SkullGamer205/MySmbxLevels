@@ -109,7 +109,7 @@ TriggerSMBXEvent,0,0,0,0,1,Hint1 - Show
 #2006 // ── Hint 2 (SMBX Event) ───────────────────────── //
 TriggerSMBXEvent,0,0,0,0,1,Hint2 - Show
 
-#2007 // ── Hint 2 (SMBX Event) ───────────────────────── //
+#2007 // ── Hint 3 (SMBX Event) ───────────────────────── //
 TriggerSMBXEvent,0,0,0,0,1,Hint3 - Show
 
 #2008 // ── Enable Autoscroll & Snowballs ─────────────── //
