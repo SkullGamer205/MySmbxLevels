@@ -2,15 +2,15 @@ HEAD
 TL:"snowlines";SZ:4;CPID:"TheXTech";
 HEAD_END
 SECTION
-SC:0;L:-200000;R:-192000;T:-200600;B:-200000;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;
-SC:1;L:-195040;R:-194240;T:-199864;B:-199264;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:25;
-SC:2;L:-192800;R:-185600;T:-201336;B:-200736;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;
-SC:3;L:-188992;R:-187872;T:-202008;B:-201408;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;
-SC:4;L:-186080;R:-179872;T:-202072;B:-201472;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;
-SC:5;L:-182400;R:-181600;T:-203744;B:-202080;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;
-SC:6;L:-180800;R:-172800;T:-202808;B:-202208;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:25;
-SC:7;L:-172000;R:-160480;T:-202872;B:-202272;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;
-SC:8;L:-160000;R:-156000;T:-202936;B:-202336;MZ:0;MF:"snowlines/mus/bloodlines.spc";BG:49;
+SC:0;L:-200000;R:-192000;T:-200600;B:-200000;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;XTRA:"{\n\"darkness\"\:{\n\"ambient\"\:\"#5b599180\"\,\n\"enableDarkness\"\:true\,\n\"shadowType\"\: 2\n}\n}\n";
+SC:1;L:-195040;R:-194240;T:-199864;B:-199264;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:25;XTRA:"{\n\"darkness\"\:{\n\"ambient\"\:\"#36366a80\"\,\n\"enableDarkness\"\:true\,\n\"shadowType\"\: 2\n}\n}\n";
+SC:2;L:-192800;R:-185600;T:-201336;B:-200736;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;XTRA:"{\n\"darkness\"\:{\n\"ambient\"\:\"#5b599180\"\,\n\"enableDarkness\"\:true\,\n\"shadowType\"\: 2\n}\n}\n";
+SC:3;L:-188992;R:-187872;T:-202008;B:-201408;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;XTRA:"{\n\"darkness\"\:{\n\"ambient\"\:\"#5b599180\"\,\n\"enableDarkness\"\:true\,\n\"shadowType\"\: 2\n}\n}\n";
+SC:4;L:-186080;R:-179872;T:-202072;B:-201472;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;XTRA:"{\n\"darkness\"\:{\n\"ambient\"\:\"#5b599180\"\,\n\"enableDarkness\"\:true\,\n\"shadowType\"\: 2\n}\n}\n";
+SC:5;L:-182400;R:-181600;T:-203744;B:-202080;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;XTRA:"{\n\"darkness\"\:{\n\"ambient\"\:\"#5b599180\"\,\n\"enableDarkness\"\:true\,\n\"shadowType\"\: 2\n}\n}\n";
+SC:6;L:-180800;R:-172800;T:-202808;B:-202208;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:25;XTRA:"{\n\"darkness\"\:{\n\"ambient\"\:\"#36366a80\"\,\n\"enableDarkness\"\:true\,\n\"shadowType\"\: 2\n}\n}\n";
+SC:7;L:-172000;R:-160480;T:-202872;B:-202272;MZ:24;MF:"snowlines/mus/bloodlines.spc";BG:49;XTRA:"{\n\"darkness\"\:{\n\"ambient\"\:\"#5b599180\"\,\n\"enableDarkness\"\:true\,\n\"shadowType\"\: 2\n}\n}\n";
+SC:8;L:-160000;R:-156000;T:-202936;B:-202336;MZ:0;MF:"snowlines/mus/bloodlines.spc";BG:49;XTRA:"{\n\"darkness\"\:{\n\"ambient\"\:\"#5b599180\"\,\n\"enableDarkness\"\:true\,\n\"shadowType\"\: 2\n}\n}\n";
 SECTION_END
 STARTPOINT
 ID:1;X:-199858;Y:-200246;D:1;
@@ -12220,6 +12220,32 @@ ID:78;X:-159936;Y:-202624;ZP:2;
 ID:149;X:-159872;Y:-202624;ZP:2;
 ID:39;X:-159872;Y:-202688;ZP:2;
 ID:39;X:-159872;Y:-202752;ZP:2;
+ID:21;X:-199840;Y:-200320;
+ID:170;X:-199840;Y:-200352;
+ID:21;X:-199840;Y:-200768;
+ID:170;X:-199840;Y:-200800;
+ID:21;X:-198784;Y:-200352;
+ID:170;X:-198784;Y:-200384;
+ID:21;X:-197280;Y:-200192;
+ID:170;X:-197280;Y:-200224;
+ID:21;X:-197440;Y:-200192;
+ID:170;X:-197440;Y:-200224;
+ID:21;X:-196832;Y:-200384;
+ID:170;X:-196832;Y:-200416;
+ID:21;X:-196384;Y:-200256;
+ID:170;X:-196384;Y:-200288;
+ID:21;X:-194400;Y:-200384;
+ID:170;X:-194400;Y:-200416;
+ID:21;X:-194768;Y:-200384;
+ID:170;X:-194768;Y:-200416;
+ID:21;X:-194656;Y:-199744;
+ID:170;X:-194656;Y:-199776;
+ID:21;X:-194656;Y:-199392;
+ID:170;X:-194656;Y:-199424;
+ID:21;X:-197200;Y:-200368;ZP:2;
+ID:170;X:-197200;Y:-200400;ZP:2;
+ID:21;X:-197520;Y:-200400;ZP:2;
+ID:170;X:-197520;Y:-200432;ZP:2;
 BGO_END
 NPC
 ID:274;X:-194656;Y:-199346;D:-1;S1:2;EE:"Onion1 - Enable";
@@ -12759,7 +12785,7 @@ LR:"SnowBlock12";
 LR:"SnowBlock13";
 LR:"SnowBlock14";
 LR:"SnowBlock15";
-LR:"Hint1-1";
+LR:"Hint1-1";HD:1;
 LR:"Hint1-2";HD:1;
 LR:"Hint1-3";HD:1;
 LR:"Hint1-4";HD:1;
