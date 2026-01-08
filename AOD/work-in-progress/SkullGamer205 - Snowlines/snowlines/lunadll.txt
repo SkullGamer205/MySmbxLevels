@@ -42,6 +42,9 @@ $HUDSec, ShowVar, 0,654,50,6,0
 ShowText,0,640,50,3,0,'
 ShowText,0,690,50,3,0,"
 
+// ── SFX ── // 
+PlaySFX,0,0,-1,128,1,sfx/wind.ogg
+
 // ── Triggers ── // 
 OnPlayerMem,0x13E, 60,0,1000,w
 IfVar,0,0,0,     1001,1,WallJumpCheck
