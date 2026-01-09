@@ -52,7 +52,7 @@ IfVar,0,1,0,     2009,0,Stars
 IfVar,0,1,0,     2010,0,Demos
 IfVar,0,1,329,   2011,0,Watch
 Timer,0,         2015,0,1,65,0
-OnEvent,0,0,1,2017,0,Level - End
+OnEvent,0,0,1,   2017,0,Level - End
 
 #0001 // ── Section 1 ─────────────────────────────────── //
 // TriggerZone, EVENT, TOP, BOTTOM, LEFT, RIGHT, ONCE&REPEAT
