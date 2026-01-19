@@ -18730,7 +18730,7 @@ ET:"InfPwrSpawner4 - Activate";LS:["InfPwrSpawner4"];DS:1;AS:0;AX:0;AY:0;
 ET:"InfPwrSpawner5 - Activate";LS:["InfPwrSpawner5"];DS:1;AS:0;AX:0;AY:0;
 ET:"InfPwrSpawner6 - Activate";LS:["InfPwrSpawner6"];DS:1;AS:0;AX:0;AY:0;
 ET:"InfPwrSpawner - SFX";SD:7;AS:0;AX:0;AY:0;
-ET:"Onion1 - Enable";SD:20;LH:["Onion1(F)","Onion1(R)"];AS:0;AX:0;AY:0;
+ET:"Onion1 - Enable";SD:20;LH:["Onion1(F)"];LS:["Onion1(R)"];AS:0;AX:0;AY:0;
 ET:"Onion2 - Disable";SD:44;LH:["Onion2(R)"];LS:["Onion2(F)"];AS:0;AX:0;AY:0;
 ET:"Onion3 - Disable";SD:92;LH:["Onion3(R)"];LS:["Onion3(F)"];AS:0;AX:0;AY:0;
 EVENTS_CLASSIC_END
