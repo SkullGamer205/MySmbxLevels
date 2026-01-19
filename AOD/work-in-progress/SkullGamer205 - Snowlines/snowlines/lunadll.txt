@@ -21,6 +21,12 @@ $HUDSec, SetVar,1,0,  0,-1,1,0
 #0000 // ── General ───────────────────────────────────── //
 LunaControl,1,1,0,0,0,0
 
+// ── Filter player (Only demo)  ── // 
+FilterPlayer,0,2,1,0,0,0
+FilterPlayer,0,3,1,0,0,0
+FilterPlayer,0,4,1,0,0,0
+FilterPlayer,0,5,1,0,0,0
+
 // ── Load Global vars (HUD) ── //
 $Coins,LoadGlobalVar,0x00B2C5A8,0,0,0,0,w
 $Lives,LoadGlobalVar,0x00B2C5AC,0,0,0,0,f

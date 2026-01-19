@@ -11,12 +11,16 @@
 
 Title                   : Snowlines
 Filename                : snowlines.lvlx
-Release date            : Not Released
+Release date            : 2026.01.19(20)
 Author                  : SkullGamer205
 Author Info 		: https://skullgamer205.neocities.org
 
-Description		: Currently WIP						...
-										
+Description             : The first level is in the style of Adventure of Demo
+                          (the successor/fan asset pack based on A Second X Thing).
+                          The level is stylized with a winter/snowy mountain theme.
+                          This level also features new mechanics specific to re-
+                          cent versions of TheXTech (specifically 1.3.7.2 and above).
+
 Additional Credits	: Textures:: Prox's NEW GFX Pack
                                      [https://www.smbxgame.com/forums/viewtopic.php?p=404880]
 
@@ -28,23 +32,25 @@ Additional Credits	: Textures:: Prox's NEW GFX Pack
                                      Level%20Assets/NPCs/SMBX%201.3.0.1/Rex/SMB3/
                                      Cooligan%20-%20Diegohx99/]
 
-                                     Big Onion (from A2XT Episode 1)
+                                     Big Onion
+                                     [from: A2XT Episode 1]
 
 			  Music::    Dracula X - Bloodline (D_MM2_13.mid)
                                      [https://www.smwcentral.net/?p=section&a=details&id=21404]
 
-                          SFX::     
+                          SFX::      Wind SFX
+                                     [from: Knytt Stories]
 
 ================================================================================
 * Additional Information *
 
-Engine                  : TheXTech (v 1.3.7.x)
+Engine                  : TheXTech (version: 1.3.8-dev, [main])
 Asset Pack              : Adventure of Demo
 Single Player           : Yes
 Cooperative 2-4 Player  : No
 
-Build Time  		: 2025.11.23 - 2026.01.XX
-Difficulty  		: Normal
+Build Time  		: 2025.11.23 - 2026.01.19(20)
+Difficulty  		: Medium (***--)
 
 LunaDLL			: Yes
 
@@ -52,8 +58,10 @@ Characters		: Demo
 Exits			: 1
 Stars			: 4
 
-Extra Information 	: Currently WIP							...
+Extra Information       : This level could also have been in SMBX Equipo Estelar's "Christ-
+                          mas Contest 2025" if the author had rushed its creation.
 
+================================================================================
 * Copyright *
 
 License			: CC BY-NC-SA 4.0
