@@ -18691,6 +18691,7 @@ ET:"Section 7 - Autoscroll \[7b/s\]";LS:["Snowballs"];SSS:["ID\:7\;AS\:1\;AX\:7\
 ET:"Snowballs - Stop";ML:"Snowballs";MX:0;MY:0;AS:0;AX:0;AY:0;
 ET:"Secret1 - Enable";LH:["Secret 1"];AS:0;AX:0;AY:0;
 ET:"Secret1 - Disable";LS:["Secret 1"];AS:0;AX:0;AY:0;
+ET:"Secret2 - Enable";AS:0;AX:0;AY:0;
 ET:"SnowBlock1";LH:["SnowBlock1"];DS:1;AS:0;AX:0;AY:0;
 ET:"SnowBlock2";LH:["SnowBlock2"];DS:1;AS:0;AX:0;AY:0;
 ET:"SnowBlock3";LH:["SnowBlock3"];DS:1;AS:0;AX:0;AY:0;
