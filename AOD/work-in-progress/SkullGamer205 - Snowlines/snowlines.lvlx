@@ -18589,6 +18589,10 @@ ID:264;X:-178112;Y:-202528;D:-1;GE:1;GT:1;GD:1;GM:10;LR:"InfPwrSpawner3";EA:"Inf
 ID:264;X:-176896;Y:-202752;D:-1;GE:1;GT:1;GD:1;GM:10;LR:"InfPwrSpawner4";EA:"InfPwrSpawner - SFX";
 ID:264;X:-174720;Y:-202720;D:-1;GE:1;GT:1;GD:1;GM:10;LR:"InfPwrSpawner5";EA:"InfPwrSpawner - SFX";
 ID:303;X:-171488;Y:-202688;D:-1;GE:1;GT:1;GD:1;GM:10;LR:"InfPwrSpawner6";EA:"InfPwrSpawner - SFX";
+ID:89;X:-192360;Y:-200952;D:-1;FD:1;LR:"CheckpointLabel";
+ID:89;X:-185656;Y:-201720;D:-1;FD:1;LR:"CheckpointLabel";
+ID:89;X:-180536;Y:-202456;D:-1;FD:1;LR:"CheckpointLabel";
+ID:89;X:-171768;Y:-202712;D:-1;NM:1;LR:"CheckpointLabel";
 NPC_END
 DOORS
 IX:-194896;IY:-200384;OX:-194896;OY:-199520;DT:1;ID:3;OD:1;
@@ -18663,16 +18667,19 @@ LR:"Checkpoint1";HD:1;
 LR:"Checkpoint2";HD:1;
 LR:"Checkpoint3";HD:1;
 LR:"Checkpoint4";HD:1;
+LR:"CheckpointLabel";HD:1;
 LAYERS_END
 EVENTS_CLASSIC
-ET:"Level - Start";LH:["Orange Goopa (Orange Switch)","InfPwrSpawner1","Snowballs","Onion1(R)","Onion2(F)","Onion3(F)","Checkpoint1","Checkpoint2","Checkpoint3","Checkpoint4","InfPwrSpawner2","InfPwrSpawner3","InfPwrSpawner4","InfPwrSpawner5","InfPwrSpawner6"];LS:["Secret 1","SnowBlock1","SnowBlock2","SnowBlock3","SnowBlock6","SnowBlock5","SnowBlock4","SnowBlock7","SnowBlock8","SnowBlock9","SnowBlock10","SnowBlock11","SnowBlock12","Hint1-1","Hint1-2","Hint1-3","Hint1-4","Hint1-5","Hint1-6","Hint1-7","Hint1-8","Hint2-1","Hint2-2","Hint2-3","Hint2-4","Hint2-5","SnowBlock13","SnowBlock14","SnowBlock15","Onion2(R)","Onion3(R)","Onion1(F)","Hint3-1","Hint3-2","Hint3-3","Hint3-4","SnowBlock16","SnowBlock17","SnowBlock18","SnowBlock19","SnowBlock20"];SSS:["ID\:7\;SL\:-172000\;ST\:-202872\;SB\:-202272\;SR\:-171200\;"];DS:1;AS:0;AX:0;AY:0;
+ET:"Level - Start";LH:["Orange Goopa (Orange Switch)","InfPwrSpawner1","Snowballs","Onion1(R)","Onion2(F)","Onion3(F)","Checkpoint1","Checkpoint2","Checkpoint3","Checkpoint4","InfPwrSpawner2","InfPwrSpawner3","InfPwrSpawner4","InfPwrSpawner5","InfPwrSpawner6","CheckpointLabel"];LS:["Secret 1","SnowBlock1","SnowBlock2","SnowBlock3","SnowBlock6","SnowBlock5","SnowBlock4","SnowBlock7","SnowBlock8","SnowBlock9","SnowBlock10","SnowBlock11","SnowBlock12","Hint1-1","Hint1-2","Hint1-3","Hint1-4","Hint1-5","Hint1-6","Hint1-7","Hint1-8","Hint2-1","Hint2-2","Hint2-3","Hint2-4","Hint2-5","SnowBlock13","SnowBlock14","SnowBlock15","Onion2(R)","Onion3(R)","Onion1(F)","Hint3-1","Hint3-2","Hint3-3","Hint3-4","SnowBlock16","SnowBlock17","SnowBlock18","SnowBlock19","SnowBlock20","DragonCoin"];SSS:["ID\:7\;SL\:-172000\;ST\:-202872\;SB\:-202272\;SR\:-171200\;"];DS:1;AS:0;AX:0;AY:0;
 ET:"P Switch - Start";AS:0;AX:0;AY:0;
 ET:"P Switch - End";SD:31;AS:0;AX:0;AY:0;
 ET:"Level - End";SD:69;SSS:["ID\:7\;MI\:0\;"];AS:0;AX:0;AY:0;
-ET:"Checkpoint1 - Reached";SD:82;LS:["Checkpoint1"];AS:0;AX:0;AY:0;
-ET:"Checkpoint2 - Reached";SD:82;LS:["Checkpoint2"];AS:0;AX:0;AY:0;
-ET:"Checkpoint3 - Reached";SD:82;LS:["Checkpoint3"];AS:0;AX:0;AY:0;
-ET:"Checkpoint4 - Reached";SD:82;LS:["Checkpoint4"];AS:0;AX:0;AY:0;
+ET:"Checkpoint1 - Reached";SD:82;LS:["Checkpoint1"];TE:"CheckpointLabel - Activate";AS:0;AX:0;AY:0;
+ET:"Checkpoint2 - Reached";SD:82;LS:["Checkpoint2"];TE:"CheckpointLabel - Activate";AS:0;AX:0;AY:0;
+ET:"Checkpoint3 - Reached";SD:82;LS:["Checkpoint3"];TE:"CheckpointLabel - Activate";AS:0;AX:0;AY:0;
+ET:"Checkpoint4 - Reached";SD:82;LS:["Checkpoint4"];TE:"CheckpointLabel - Activate";AS:0;AX:0;AY:0;
+ET:"CheckpointLabel - Activate";LS:["CheckpointLabel"];TE:"CheckpointLabel - deactivate";TD:19;DS:1;AS:0;AX:0;AY:0;
+ET:"CheckpointLabel - deactivate";LH:["CheckpointLabel"];DS:1;AS:0;AX:0;AY:0;
 ET:"Orange Switch (Activated)";LS:["Orange Goopa (Orange Switch)"];AS:0;AX:0;AY:0;
 ET:"Section 7 - Autoscroll \[1b/s\]";SSS:["ID\:7\;AS\:1\;AX\:1\;","ID\:8\;AX\:0.492308\;"];TE:"Section 7 - Autoscroll \[2b/s\]";TD:5;ML:"Snowballs";MX:1;MY:0;AS:0;AX:0;AY:0;
 ET:"Section 7 - Autoscroll \[2b/s\]";SSS:["ID\:7\;AS\:1\;AX\:2\;"];TE:"Section 7 - Autoscroll \[3b/s\]";TD:5;ML:"Snowballs";MX:2;MY:0;AS:0;AX:0;AY:0;
