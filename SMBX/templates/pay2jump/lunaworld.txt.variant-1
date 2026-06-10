@@ -1,0 +1,27 @@
+#0000   // Condition to block jump if
+        // player doesn't have any coins
+        // on balance.
+  OnGlobalMem,0x00B2C5A8,1,2,1004,f
+
+        // Condition to check ground collide
+  OnPlayerMem,0x146,2,0,1000,w
+
+#1000   // If player click/hold one of these buttons
+  OnPlayerMem,0xFA,0,1,1001,1,b
+  OnPlayerMem,0xFC,0,1,1001,1,b
+
+#1001   // Another condition to check that
+        // player doesn't collide with ground
+  OnPlayerMem,0x146,0,0,1002,1,w
+
+#1002   // Another condition to check that
+        // jump force are greater than zero
+  OnPlayerMem,0x11C,0,1,1003,1,w
+
+#1003   // Withdraw coin to jump
+MemAssign,0x00B2C5A8,1,2,0,1,f
+
+#1004   // Jump Blocker
+  ShowText,0,100,100,3,2,NOPE
+  PlayerMemSet,0,0x120,0,0,1,w
+  PlayerMemSet,0,0x11e,0,0,1,b
