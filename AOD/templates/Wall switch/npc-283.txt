@@ -1,0 +1,3 @@
+playerblock=0
+playerblocktop=0
+noblockcollision=1
